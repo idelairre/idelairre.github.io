@@ -38,7 +38,7 @@ when you don’t know how many items will be in your list</li>
 
 [^1]: <a href="http://sdmeta.gforge.inria.fr/FreeBooks/Joy/11.pdf">http://sdmeta.gforge.inria.fr/FreeBooks/Joy/11.pdf</a>
 
-[^2]: <a href="http://en.wikipedia.org/wiki/Queue_(abstract_data_type")>http://en.wikipedia.org/wiki/Queue_(abstract_data_type")</a>
+[^2]: <a href="http://en.wikipedia.org/wiki/Queue_(abstract_data_type)">http://en.wikipedia.org/wiki/Queue_(abstract_data_type)></a>
 
 [^3]: <a href="http://stackoverflow.com/questions/7431054/when-where-how-should-queues-be-used">http://stackoverflow.com/questions/7431054/when-where-how-should-queues-be-used</a>
 
