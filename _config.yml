@@ -1,14 +1,14 @@
 # Site settings
-title: DifferendKomplex
+title: ian delairre
 author: Ian Delairre
 author_avatar: https://gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=50
 email: idelairre@gmail.com
 description: Blog about whatever.
 baseurl: "" # optional
 url: "https://github.com/idelairre"
-#twitter_username: foo_bar
-#github_username: foo_bar
-github_repo: foo_bar/foo_bar.github.io
+twitter_username: idelairre
+github_username: idelairre
+github_repo: https://github.com/idelairre/idelairre.github.io
 #google_analytics: UA-80085-YOUR-ID
 # disqus: disqus-id
 
