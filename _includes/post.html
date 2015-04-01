@@ -7,6 +7,7 @@
 	    <p class="entry-meta">
 		    {{ page.date | date: "%b %-d, %Y" }}
 		    {% if page.category %} • Category: {{ page.category|capitalize }}{% endif %}
+			<a href="{{ page.url }}index.html#disqus_thread" data-disqus-identifier="{{page.url}}"></a>
 	    </p>
 	  </header>
 
@@ -33,3 +34,5 @@
 	{% endif %}
 
 {% endif %}
+
+{% include disqus_comments.html %}

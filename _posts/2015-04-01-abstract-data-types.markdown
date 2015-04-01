@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Abstract Data Types"
+title: "CS: abstract data types"
 date: 2015-04-01 10:52:38 -0400
 comments: true
 categories:

@@ -10,7 +10,7 @@ twitter_username: idelairre
 github_username: idelairre
 github_repo: https://github.com/idelairre/idelairre.github.io
 #google_analytics: UA-80085-YOUR-ID
-# disqus: disqus-id
+disqus: idelairre
 
 # Build settings
 markdown: kramdown

@@ -5,12 +5,49 @@
     <description>Blog about whatever.</description>
     <link>https://github.com/idelairre/</link>
     <atom:link href="https://github.com/idelairre/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 01 Apr 2015 15:05:07 -0400</pubDate>
-    <lastBuildDate>Wed, 01 Apr 2015 15:05:07 -0400</lastBuildDate>
+    <pubDate>Wed, 01 Apr 2015 16:31:35 -0400</pubDate>
+    <lastBuildDate>Wed, 01 Apr 2015 16:31:35 -0400</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
-        <title>Abstract Data Types</title>
+        <title>who am i? what am i doing here? why am i talking?</title>
+        <description>&lt;p&gt;This blog constitutes my first foray into computer science. The topics here cover fundamentals like data structures, basic functions like sorts and the fundamental concepts of object oriented programming. I am by no means an expert and this constitutes a kind of excursion into totally foreign lands for me. If you want to know how a person with zero to no mathematical training understands computer science than you’ve come to the right place (you will no doubt hear some griping about the US education system and its consistent failure to teach math in a fair/interesting/useful manner). &lt;/p&gt;
+
+&lt;p&gt;My background is in continental philosophy but my exposure to Francois Laruelle’s non-philosophy, graduate level academic trauma, and certain economic exigencies have pushed me in the direction of programming (and I think I’ve not only benefitted from it but perhaps saved myself).&lt;/p&gt;
+
+&lt;p&gt;In a week I will be graduating from General Assembly’s web development immersive program, however, it will be quite a journey for me to become a fully fledged programmer and computer scientist but I’m willing to do my due dilligence. If you find this AT ALL interesting than please leave comments, advice and so on. Wish me luck.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 01 Apr 2015 10:52:38 -0400</pubDate>
+        <link>https://github.com/idelairre/2015/04/01/who-am-i-what-am-i-doing-here/</link>
+        <guid isPermaLink="true">https://github.com/idelairre/2015/04/01/who-am-i-what-am-i-doing-here/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>CS: trees, binary trees and tries</title>
+        <description>
+</description>
+        <pubDate>Wed, 01 Apr 2015 10:52:38 -0400</pubDate>
+        <link>https://github.com/idelairre/2015/04/01/trees-binary-trees-and-tries/</link>
+        <guid isPermaLink="true">https://github.com/idelairre/2015/04/01/trees-binary-trees-and-tries/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>CS: bubble, merge, insertion, quick, and selection sorts</title>
+        <description>
+</description>
+        <pubDate>Wed, 01 Apr 2015 10:52:38 -0400</pubDate>
+        <link>https://github.com/idelairre/2015/04/01/sorts-bubble-merge-insertion-quick-selection/</link>
+        <guid isPermaLink="true">https://github.com/idelairre/2015/04/01/sorts-bubble-merge-insertion-quick-selection/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>CS: abstract data types</title>
         <description>&lt;p&gt;&lt;i&gt;Note: Most of this information was gained from a basic Google search and is presented here for the sake of distilling some basic concepts of computer science into an easily understandable form. This post concerns Abstract Data Types or ADTs.&lt;/i&gt;&lt;/p&gt;
 &lt;h2&gt;Queues&lt;/h2&gt;
 

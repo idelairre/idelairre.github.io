@@ -6,4 +6,4 @@ comments: false
 author_footer: false
 ---
 
-About page, add content here. 
+I'm a web developer and brogrammer who wants to program the lightbulb fist. My other talents and interests are in writing, philosophy, psychoanalysis and art theory.
