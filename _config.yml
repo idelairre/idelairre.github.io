@@ -19,3 +19,5 @@ excerpt_separator: "<!-- more -->"
 
 gems:
   - jekyll-sitemap
+
+paginate: 5
