@@ -362,3 +362,7 @@ em {
   position: relative;
   top: 3px;
 }
+
+.section {
+	border-top: 2px solid #ddd;
+}
