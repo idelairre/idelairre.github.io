@@ -6,6 +6,8 @@ comments: false
 author_footer: false
 ---
 
+coming soon
+
 <div class="technical-portfolio">
 <div class="project-1">
 </div>

@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ian delairre</title>
-    <description>Blog about whatever.</description>
+    <description>Blog about web development, computer science, and probably indulgent philosophizing.</description>
     <link>https://github.com/idelairre/</link>
     <atom:link href="https://github.com/idelairre/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 01 Apr 2015 21:44:58 -0400</pubDate>
-    <lastBuildDate>Wed, 01 Apr 2015 21:44:58 -0400</lastBuildDate>
+    <pubDate>Thu, 02 Apr 2015 00:40:00 -0400</pubDate>
+    <lastBuildDate>Thu, 02 Apr 2015 00:40:00 -0400</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -36,6 +36,8 @@
         <title>CS: trees, binary trees and tries</title>
         <description>&lt;p&gt;&lt;i&gt;Note: Most of this information was gained from a basic Google search and is presented here for the sake of distilling some basic concepts of computer science into an easily understandable form. This post concerns Tree data structures.&lt;/i&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;b&gt;to do: fill out citations, show code snippets from GA exercises, finish tries section.&lt;/b&gt;&lt;/p&gt;
+
 &lt;p&gt;&lt;strong&gt;tree/shameless Laruelle plug:&lt;/strong&gt;&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
 &lt;img src=&quot;http://rosettacode.org/mw/images/d/d7/Fractal_tree.svg&quot; /&gt;&lt;/p&gt;
 
@@ -44,7 +46,7 @@
 
 &lt;p&gt;Trees are particularly useful for storing heirarchically arranged data. They are also very human readable since their visual organization resembles that of an actual tree. Further, for a relatively complex data structure (relative to a stack or queue) they can be traversed or &quot;&lt;a href=&quot;http://en.wikipedia.org/wiki/Tree_traversal&quot;&gt;walked&lt;/a&gt;&quot; through relatively quickly, although this is highly dependent on their depth. Further, in the case of natural language processing, a large corpus of text can be stored as a tree which significantly reduces the query time required to find a sequence of words (as is the case with &lt;a href=&quot;http://en.wikipedia.org/wiki/N-gram&quot;&gt;&lt;i&gt;n&lt;/i&gt;-grams)&lt;/a&gt; and the memory requirements for its storage.&lt;/p&gt;
 
-&lt;p&gt;Since this terminology can become somewhat convoluted I&#39;ve provided a list of terms (note: these terms courtesy of the internet).&lt;/p&gt;
+&lt;p&gt;Since this terminology can become somewhat convoluted I’ve provided a list of terms (note: these terms courtesy of the internet).&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Tree terminology:&lt;/strong&gt;&lt;/p&gt;
 &lt;li&gt;Node: stores a data element&lt;/li&gt;
@@ -76,7 +78,7 @@
 &lt;/div&gt;
 &lt;h2&gt;Tries&lt;/h2&gt;
 
-&lt;p&gt;What is immediately distinguishing about a trie vs. a binary tree is that values are not stored at nodes but are rather indicated by the nodes position in the tree: “Unlike a binary search tree, no node in the tree stores the key associated with that node; instead, its position in the tree defines the key with which it is associated. All the descendants of a node have a common prefix of the string associated with that node, and the root is associated with the empty string. Values are normally not associated with every node, only with leaves and some inner nodes that correspond to keys of interest.”&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; Common applications for tries are for autocompletion or for storing predictive text.&lt;/p&gt;
+&lt;p&gt;What is immediately distinguishing about a trie vs. a binary tree is that values are not stored at nodes but are rather indicated by the nodes position in the tree: “Unlike a binary search tree, no node in the tree stores the key associated with that node; instead, its position in the tree defines the key with which it is associated. All the descendants of a node have a common prefix of the string associated with that node, and the root is associated with the empty string. Values are normally not associated with every node, only with leaves and some inner nodes that correspond to keys of interest.”&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; Common applications for tries are for autocompletion or for storing predictive text.&lt;/p&gt;
 
 &lt;p&gt;More on this later (with code snippets and more!)&lt;/p&gt;
 
@@ -86,7 +88,11 @@
       &lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Philosophy-Non-Philosophy-Univocal-Fran%C3%A7ois-Laruelle/dp/1937561127/ref=pd_bxgy_b_img_y&quot;&gt;http://www.amazon.com/Philosophy-Non-Philosophy-Univocal-Fran%C3%A7ois-Laruelle/dp/1937561127/ref=pd_bxgy_b_img_y&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Trie&quot;&gt;http://en.wikipedia.org/wiki/Trie&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Trie&quot;&gt;http://en.wikipedia.org/wiki/Trie&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
@@ -101,6 +107,151 @@
       <item>
         <title>CS: bubble, merge, insertion, quick, and selection sorts</title>
         <description>&lt;p&gt;&lt;i&gt;Note: Most of this information was gained from a basic Google search and is presented here for the sake of distilling some basic concepts of computer science into an easily understandable form. This post concerns the variety of sort types.&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;to do: shorten bubble sort, finish selection sort (its just citations at the moment), show code snippets from GA exercises, get computer science degree&lt;/b&gt;&lt;/p&gt;
+
+&lt;h2&gt;Bubble sort&lt;/h2&gt;
+
+&lt;p&gt;The first sorting method we will deal with is the bubble sort. For something like this I immediately want to know why it is called a bubble sort. Fortunately the good folks at wikibooks have an answer: “The bubble sort gets its name because elements tend to move up into the correct order like bubbles rising to the surface.”&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; Interesting, so why does it have this behavior? The scary-smart brogrammer (who like myself could use some decent acne wash) who does the Harvard CS50 course explains: “the right most elements are garaunteed to be in their correct place.” He then takes the worst case scenario for sorting an array of numbers (the case that involves the most iterations) to demonstrate.&lt;/p&gt;
+
+&lt;p&gt;If we have an array &lt;code&gt;[9, 6, 5, 3, 2]&lt;/code&gt; and we iterate once then we have &lt;code&gt;[6, 9, 5, 3, 2]&lt;/code&gt; on the next pass we have &lt;code&gt;[6, 5, 9, 3, 2]&lt;/code&gt;. We can already see the &lt;code&gt;9&lt;/code&gt; being passed to the right on each iteration so that it appears to “bubble” towards the right. &lt;/p&gt;
+
+&lt;p&gt;On the next iteration we have &lt;code&gt;[6, 5, 3, 9, 2]&lt;/code&gt; and finally &lt;code&gt;[6, 5, 3, 2, 9]&lt;/code&gt;. On the next iteration it will start with &lt;code&gt;6&lt;/code&gt; thus, &lt;code&gt;[5, 6, 3, 2, 9]&lt;/code&gt; then &lt;code&gt;[5, 3, 6, 2, 9]&lt;/code&gt; and so on. This is clearly a very “expensive” operation (least not indicated because it was very tedious to type all those iterations). As such, its run time O of n is On&lt;sup&gt;2&lt;/sup&gt;, checking every element through each iteration.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bubble sort in action:&lt;/strong&gt;&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;
+&lt;img src=&quot;http://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A “naive” or simple sorting algorithm would check all the elements of the array. However, knowing that the right most element is already sorted allows for a slight optimization. One can optimize again with flags and counters. At risk of repeating everything our clever bro says in the movie, I’ll allow you to check it out yourself.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; Also checkout wikipedia’s &lt;a href=&quot;http://en.wikipedia.org/wiki/Bubble_sort#Optimizing_bubble_sort&quot;&gt;article on optimizing bubble sorts.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Merge Sort&lt;/h2&gt;
+
+&lt;p&gt;A merge sort, as the name suggests, merges two sorted lists. Since there is a major time crunch on this assignment, I’ll again stick closely to the CS50 examples (this time featuring a brogrammer in an American Eagle polo his mom probably got for him in high school, but my God is he sexy smart).&lt;/p&gt;
+
+&lt;p&gt;Supposing you have two already sorted lists &lt;code&gt;[4, 15, 16, 50]&lt;/code&gt; and &lt;code&gt;[8, 23, 42, 108]&lt;/code&gt;, since they are already sorted (with the smallest elements at the left of the list) you can take each first element of the two lists and compare whether one is larger than the other. &lt;code&gt;4&lt;/code&gt; is smaller so it  is entered as the first element of the new sorted list. The next task is to compare whether &lt;code&gt;8&lt;/code&gt; is larger or smaller than &lt;code&gt;15&lt;/code&gt;. Since &lt;code&gt;8&lt;/code&gt; is smaller it enters the sorted list as the second element and so forth.&lt;/p&gt;
+
+&lt;p&gt;The basic pseudo code for this sorting algorithm is to compare the first two elements of each list and remove the smaller of the two. So after iterating through each list our final result should be &lt;code&gt;[4, 8, 15, 16, 23, 42, 50, 108]&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Merge sort in action:&lt;/strong&gt;&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;
+&lt;img src=&quot;http://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Merge_sort_animation2.gif/220px-Merge_sort_animation2.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Assuming a less ideal situation where the same numbers are out of order in a single list, we need to adjust the algorithm. Here, our nerdcore brogrammer produces the list &lt;code&gt;[108, 15, 50, 4, 8, 42, 23, 16]&lt;/code&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;First we must split the lists in half until we have &lt;i&gt;n&lt;/i&gt; number lists for &lt;i&gt;n&lt;/i&gt; number elements: &lt;code&gt;[108][15][50][4][8][42][23][16]&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Step two uses basically the same algorithm as before: the first two elements of two given lists are compared and the smaller one is entered as the first element of a new sorted list until all lists are of size 2: &lt;code&gt;[15, 108][4, 50][8, 42][16, 23]&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Step three is to repeat this process until the lists are of size 4: &lt;code&gt;[4, 15, 50, 108][8, 16, 23, 42]&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Step four concludes the first pass by producing a single sorted list: &lt;code&gt;[4, 8, 15, 16, 23, 42, 50, 108]&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So actually this is rather fast: O(&lt;i&gt;n&lt;/i&gt; log &lt;i&gt;n&lt;/i&gt;). But  the speed trade off are its memory requirements since it has to make new lists and store them in memory. Further, the use cases for merge sort may be limited since they tend to become inefficient for lists larger than 50 and are not universally faster than other algorithms with all unsorted lists.&lt;/p&gt;
+
+&lt;p&gt;If you somehow found this useful than I don’t recommend watching the video, however, if you want to watch our brogrammers adorable blooper reel, definitely checkout the &lt;a href=&quot;https://www.youtube.com/watch?v=EeQ8pwjQxTM&quot;&gt;CS50 video&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Insertion sort: the most phallogocentric sorting method&lt;/h2&gt;
+
+&lt;p&gt;An insertion sort iterates through an unsorted list one element at a time, grabbing it and determining its correct position in the sorted array. This is done by determing if it is larger or smaller than the first element in the sorted list. If it larger, it compares itself against the next element in the list until it finds an element larger than itself, in this case, it inserts itself in front of that element.&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;As such it is hardly an efficient algorithm. However, it can be faster than more advanced algorithms with very small data sets. Further, it is an incredibly simple program to write. Wikipedia notes that there is a three-line C version (which must be nothing short of a miracle).&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt; Another advantage is that the sorted list is always sorted since it always puts the new element in the right order.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;insertion sort in action:&lt;/strong&gt;&lt;sup id=&quot;fnref:7&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;
+&lt;img src=&quot;http://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So much for insertion sort.&lt;/p&gt;
+
+&lt;h2&gt;Quick sort&lt;/h2&gt;
+
+&lt;p&gt;&lt;i&gt;Note: this sort method is really difficult to explain so I feel it is best to start with its terms. In this instance I find it useful to “bruteforce” my understanding with a lot of different examples. &lt;a href=&quot;https://www.youtube.com/watch?v=3OLTJlwyIqQ&quot;&gt;This video&lt;/a&gt; was particularly helpful.&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;quick sort terms:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;pivot: the element being sorted&lt;/li&gt;
+  &lt;li&gt;wall: the end of the list&lt;/li&gt;
+  &lt;li&gt;current element: leftmost element&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Firstly, it is important to note that all elements to the right of the wall are bigger than then the the elements to the left.&lt;/p&gt;
+
+&lt;p&gt;Quick sort takes the “pivot” element and compares its size against the element against the “wall” to see if it is larger than it. If it isn’t than it counts up the list until it finds such an element. When it finds it, it takes that element and puts it against the wall and takes the element previously against the wall and places it in the index of the swapped number, the wall then moves up to the next position in the list.&lt;/p&gt;
+
+&lt;p&gt;If no other elements on the right side of the wall are larger then the algorithm takes the pivot element and swaps it with the first item to the right of the wall and the wall moves up accordingly.&lt;/p&gt;
+
+&lt;p&gt;This algorithm is has the potential to be somewhat expensive in the worst, worst case scenario. Thus to increase the efficiency of this sort, one can use an inexpensive search to find the median value of the elements of the array to use as the pivot.&lt;sup id=&quot;fnref:8&quot;&gt;&lt;a href=&quot;#fn:8&quot; class=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;quick sort:&lt;/strong&gt;&lt;sup id=&quot;fnref:9&quot;&gt;&lt;a href=&quot;#fn:9&quot; class=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt;
+&lt;img src=&quot;http://www.lisdn.com/attachments/2013/07/1_2013070813412612CE8.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;Selection Sort&lt;/h2&gt;
+
+&lt;p&gt;“Selection sort is one way to sort an array of numbers. Data is divided into sorted and unsorted portions. One by one, the smallest values remaining in the unsorted portion are selected and swapped over to the sorted portion of the array.”&lt;sup id=&quot;fnref:10&quot;&gt;&lt;a href=&quot;#fn:10&quot; class=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;First, scan the unsorted portion of the array to find the smallest value.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Swap that value with the first unsorted value – it is now part of the sorted subarray.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Repeat until there are no more values in the unsorted portion of the array.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;“In both the best and worst cases, we’d have to compare each element to every other element in the unsorted subarray to ensure that the smallest value is selected on each iteration. As such, the selection sort algorithm takes n2 in the best and worst cases.”&lt;sup id=&quot;fnref:11&quot;&gt;&lt;a href=&quot;#fn:11&quot; class=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;Since the best and worst case runtimes of selection sort are equivalent, the expected runtime is Θ(n2)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;selection sort in action:&lt;/strong&gt;&lt;sup id=&quot;fnref:12&quot;&gt;&lt;a href=&quot;#fn:12&quot; class=&quot;footnote&quot;&gt;12&lt;/a&gt;&lt;/sup&gt;
+&lt;img src=&quot;http://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Selection_sort_animation.gif/250px-Selection_sort_animation.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://en.wikibooks.org/wiki/Algorithm_Implementation/Sorting/Bubble_sort&quot;&gt;http://en.wikibooks.org/wiki/Algorithm_Implementation/Sorting/Bubble_sort&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Bubble_sort#Analysis&quot;&gt;http://en.wikipedia.org/wiki/Bubble_sort#Analysis&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=8Kp-8OGwphY&quot;&gt;https://www.youtube.com/watch?v=8Kp-8OGwphY&lt;/a&gt;. See also: &lt;a href=&quot;https://study.cs50.net/bubble_sort&quot;&gt;https://study.cs50.net/bubble_sort&lt;/a&gt;. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Merge_sort&quot;&gt;http://en.wikipedia.org/wiki/Merge_sort&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;for the wonderful ambiguity of the term “ahead” or “behind” and some excellent intellectual penis jokes checkout Derrida’s &lt;a href=&quot;http://www.scribd.com/doc/39065838/Derrida-The-Postcard#scribd&quot;&gt;&lt;i&gt;Postcard&lt;/i&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Insertion_sort&quot;&gt;http://en.wikipedia.org/wiki/Insertion_sort&lt;/a&gt; &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:7&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Insertion_sort#Algorithm&quot;&gt;http://en.wikipedia.org/wiki/Insertion_sort#Algorithm&lt;/a&gt; &lt;a href=&quot;#fnref:7&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:8&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=aQiWF4E8flQ&quot;&gt;https://www.youtube.com/watch?v=aQiWF4E8flQ&lt;/a&gt; &lt;a href=&quot;#fnref:8&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:9&quot;&gt;
+      &lt;p&gt;Note: the website I got this from is in Chinese &lt;a href=&quot;http://www.lisdn.com/&quot;&gt;http://www.lisdn.com/&lt;/a&gt; &lt;a href=&quot;#fnref:9&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:10&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://study.cs50.net/selection_sort&quot;&gt;https://study.cs50.net/selection_sort&lt;/a&gt; &lt;a href=&quot;#fnref:10&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:11&quot;&gt;
+      &lt;p&gt;ibid. &lt;a href=&quot;#fnref:11&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:12&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Selection_sort&quot;&gt;http://en.wikipedia.org/wiki/Selection_sort&lt;/a&gt; &lt;a href=&quot;#fnref:12&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
 </description>
         <pubDate>Wed, 01 Apr 2015 10:52:38 -0400</pubDate>
         <link>https://github.com/idelairre/2015/04/01/sorts-bubble-merge-insertion-quick-selection/</link>
