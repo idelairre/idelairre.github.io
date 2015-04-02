@@ -29,7 +29,11 @@ A merge sort, as the name suggests, merges two sorted lists. Since there is a ma
 
 Supposing you have two already sorted lists ```[4, 15, 16, 50]``` and ```[8, 23, 42, 108]```, since they are already sorted (with the smallest elements at the left of the list) you can take each first element of the two lists and compare whether one is larger than the other. ```4``` is smaller so it  is entered as the first element of the new sorted list. The next task is to compare whether ```8``` is larger or smaller than ```15```. Since ```8``` is smaller it enters the sorted list as the second element and so forth.
 
-The basic pseudo code for this sorting algorithm is to compare the first two elements of each list and remove the smaller of the two. So after iterating through each list our final result should be ```[4, 8, 15, 16, 23, 42, 50, 108]```.
+The basic pseudo code for this sorting algorithm is to compare the first two elements of each list and remove the smaller of the two. 
+
+On the first comparison you would have ```[4, 8]``` with the two remaining arrays being ```[15, 16, 50]``` and ```[23, 42, 108]```.  On the second comparison you would have ```[4, 8, 15, 16]``` with the two remaining arrays being ```[50]``` and ```[42, 108]```. On the third comparison you would have ```[4, 8, 15, 16]``` with the two remaining arrays being ```[50]``` and ```[42, 108]``` and so on.
+
+So after iterating through each list our final result would naturally be ```[4, 8, 15, 16, 23, 42, 50, 108]```.
 
 <strong>Merge sort in action:</strong>[^4]
 <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Merge_sort_animation2.gif/220px-Merge_sort_animation2.gif">
