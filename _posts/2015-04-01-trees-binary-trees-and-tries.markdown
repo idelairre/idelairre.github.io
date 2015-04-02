@@ -8,7 +8,7 @@ categories:
 
 <i>Note: Most of this information was gained from a basic Google search and is presented here for the sake of distilling some basic concepts of computer science into an easily understandable form. This post concerns Tree data structures.</i>
 
-<b>to do: fill out citations, show code snippets from GA exercises, finish tries section.</b>
+<b>to do: fill out citations, show code snippets from GA exercises, finish tries section, add a little somethin'-somethin' on graph theory.</b>
 
 <strong>tree/shameless Laruelle plug:</strong>[^1]
 <img src="http://rosettacode.org/mw/images/d/d7/Fractal_tree.svg">

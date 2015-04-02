@@ -8,7 +8,7 @@ categories:
 
 <i>Note: Most of this information was gained from a basic Google search and is presented here for the sake of distilling some basic concepts of computer science into an easily understandable form. This post concerns the variety of sort types.</i>
 
-<b>to do: shorten bubble sort, finish selection sort (its just citations at the moment), show code snippets from GA exercises, get computer science degree</b>
+<b>to do: shorten bubble sort, finish selection sort (its just citations at the moment), show code snippets from GA exercises, get computer science degree.</b>
 
 <h2>Bubble sort</h2>
 
@@ -77,6 +77,8 @@ If no other elements on the right side of the wall are larger then the algorithm
 
 
 This algorithm is has the potential to be somewhat expensive in the worst, worst case scenario. Thus to increase the efficiency of this sort, one can use an inexpensive search to find the median value of the elements of the array to use as the pivot.[^8]
+
+Definitely check out this <a href="http://cs.stackexchange.com/questions/3/why-is-quicksort-better-than-other-sorting-algorithms-in-practice">stack exchange post</a> if runtime and efficiency interests you.
 
 <strong>quick sort:</strong>[^9]
 <img src="http://www.lisdn.com/attachments/2013/07/1_2013070813412612CE8.gif">
