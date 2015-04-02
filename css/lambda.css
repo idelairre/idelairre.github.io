@@ -366,3 +366,10 @@ em {
 .section {
 	border-top: 2px solid #ddd;
 }
+
+.picture-column-1 {
+	position: relative;
+	float: left;
+}
+	
+}

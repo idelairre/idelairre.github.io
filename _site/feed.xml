@@ -5,17 +5,25 @@
     <description>Blog about whatever.</description>
     <link>https://github.com/idelairre/</link>
     <atom:link href="https://github.com/idelairre/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 01 Apr 2015 17:34:08 -0400</pubDate>
-    <lastBuildDate>Wed, 01 Apr 2015 17:34:08 -0400</lastBuildDate>
+    <pubDate>Wed, 01 Apr 2015 21:44:58 -0400</pubDate>
+    <lastBuildDate>Wed, 01 Apr 2015 21:44:58 -0400</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>who am i? what am i doing here? why am i talking?</title>
         <description>&lt;p&gt;This blog constitutes my first foray into computer science. The topics here cover fundamentals like data structures, basic functions like sorts and the fundamental concepts of object oriented programming. I am by no means an expert and this constitutes a kind of excursion into totally foreign lands for me. If you want to know how a person with zero to no mathematical training understands computer science than you’ve come to the right place (you will no doubt hear some griping about the US education system and its consistent failure to teach math in a fair/interesting/useful manner). &lt;/p&gt;
 
-&lt;p&gt;My background is in continental philosophy but my exposure to Francois Laruelle’s non-philosophy, graduate level academic trauma, and certain economic exigencies have pushed me in the direction of programming (and I think I’ve not only benefitted from it but perhaps saved myself).&lt;/p&gt;
+&lt;p&gt;My background is in continental philosophy but my exposure to Francois Laruelle’s non-philosophy, graduate level academic trauma, and certain economic exigencies have pushed me in the direction of programming (and I think I’ve not only benefitted from it but perhaps saved myself).&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;p&gt;In a week I will be graduating from General Assembly’s web development immersive program, however, it will be quite a journey for me to become a fully fledged programmer and computer scientist but I’m willing to do my due dilligence. If you find this AT ALL interesting than please leave comments, advice and so on. Wish me luck.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;if you want to see this sordid history documented checkout my old wordpress OR NOT: &lt;a href=&quot;https://differendkomplex.wordpress.com/&quot;&gt;https://differendkomplex.wordpress.com/&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
 </description>
         <pubDate>Wed, 01 Apr 2015 10:52:38 -0400</pubDate>
         <link>https://github.com/idelairre/2015/04/01/who-am-i-what-am-i-doing-here/</link>
@@ -26,7 +34,62 @@
     
       <item>
         <title>CS: trees, binary trees and tries</title>
-        <description>
+        <description>&lt;p&gt;&lt;i&gt;Note: Most of this information was gained from a basic Google search and is presented here for the sake of distilling some basic concepts of computer science into an easily understandable form. This post concerns Tree data structures.&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;tree/shameless Laruelle plug:&lt;/strong&gt;&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
+&lt;img src=&quot;http://rosettacode.org/mw/images/d/d7/Fractal_tree.svg&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;Trees&lt;/h2&gt;
+&lt;p&gt;A tree is a data structure that consists of a parent or root node which stores a data element and which possesses at least one child or branch. These child nodes in turn possess their own values and may have their own children (note: all nodes have 1 parent except for the root node which has 0).&lt;/p&gt;
+
+&lt;p&gt;Trees are particularly useful for storing heirarchically arranged data. They are also very human readable since their visual organization resembles that of an actual tree. Further, for a relatively complex data structure (relative to a stack or queue) they can be traversed or &quot;&lt;a href=&quot;http://en.wikipedia.org/wiki/Tree_traversal&quot;&gt;walked&lt;/a&gt;&quot; through relatively quickly, although this is highly dependent on their depth. Further, in the case of natural language processing, a large corpus of text can be stored as a tree which significantly reduces the query time required to find a sequence of words (as is the case with &lt;a href=&quot;http://en.wikipedia.org/wiki/N-gram&quot;&gt;&lt;i&gt;n&lt;/i&gt;-grams)&lt;/a&gt; and the memory requirements for its storage.&lt;/p&gt;
+
+&lt;p&gt;Since this terminology can become somewhat convoluted I&#39;ve provided a list of terms (note: these terms courtesy of the internet).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tree terminology:&lt;/strong&gt;&lt;/p&gt;
+&lt;li&gt;Node: stores a data element&lt;/li&gt;
+&lt;li&gt;Parent: single node that directly precedes a node&lt;/li&gt;
+&lt;li&gt;Child: one or more nodes that directly follow a node&lt;/li&gt;
+&lt;li&gt;Ancestory: any node which precedes a node (itself, its parent, or an ancestory of its parent&lt;/li&gt;
+&lt;li&gt;Descendent: any node which follows a node (itself, its child, or a descendent of its child&lt;/li&gt;
+&lt;li&gt;Leaf (external node): node with no children&lt;/li&gt;
+&lt;li&gt;Internal node: non-leaf node&lt;/li&gt;
+&lt;li&gt;Siblings: nodes which share some parent&lt;/li&gt;
+&lt;li&gt;Subtree: a node and all its descendents&lt;/li&gt;
+&lt;li&gt;Ordered tree: a tree with definied order of children&lt;/li&gt;
+&lt;li&gt;Binary tree: ordered tree with up to two children per node&lt;/li&gt;
+
+&lt;p&gt;Practically, trees are implemented via recursion (where the function that creates the branch is called within the function itself) and a conditional sorting method.&lt;/p&gt;
+
+&lt;h2&gt;Two types of trees&lt;/h2&gt;
+
+&lt;p&gt;There are a variety of tree types, however, here we will address two simple types: the binary tree, which accordingly is a tree with a left and right branch, and a trie, which unhappily is far more complex (note: evidently the word &quot;trie&quot; comes from the word &quot;retrieval&quot; it can be pronounced either &quot;try&quot; or &quot;tree&quot; but definitively does not have a relationship with the word &quot;tri&quot; as in &quot;tricycle&quot;). For our purposes we will focus on tries for the rest of the article (although binary trees are certainly &lt;a href=&quot;http://en.wikipedia.org/wiki/Binary_tree#Types_of_binary_trees&quot;&gt;varied&lt;/a&gt; and &lt;a href=&quot;http://mathworld.wolfram.com/BinaryTree.html&quot;&gt;complicated&lt;/a&gt; in their own right).&lt;/p&gt;
+
+&lt;div class=&quot;picture-column-1&quot;&gt;
+&lt;strong&gt;Binary tree:&lt;/strong&gt;
+
+&lt;img width=&quot;330&quot; src=&quot;http://upload.wikimedia.org/wikipedia/commons/6/67/Sorted_binary_tree.svg&quot; /&gt;
+&lt;/div&gt;
+&lt;div class=&quot;picture-column-2&quot;&gt;
+&lt;strong&gt;Trie:&lt;/strong&gt;
+&lt;img width=&quot;355&quot; height=&quot;300&quot; src=&quot;http://i.stack.imgur.com/KhvoF.png&quot; /&gt;
+&lt;/div&gt;
+&lt;h2&gt;Tries&lt;/h2&gt;
+
+&lt;p&gt;What is immediately distinguishing about a trie vs. a binary tree is that values are not stored at nodes but are rather indicated by the nodes position in the tree: “Unlike a binary search tree, no node in the tree stores the key associated with that node; instead, its position in the tree defines the key with which it is associated. All the descendants of a node have a common prefix of the string associated with that node, and the root is associated with the empty string. Values are normally not associated with every node, only with leaves and some inner nodes that correspond to keys of interest.”&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; Common applications for tries are for autocompletion or for storing predictive text.&lt;/p&gt;
+
+&lt;p&gt;More on this later (with code snippets and more!)&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Philosophy-Non-Philosophy-Univocal-Fran%C3%A7ois-Laruelle/dp/1937561127/ref=pd_bxgy_b_img_y&quot;&gt;http://www.amazon.com/Philosophy-Non-Philosophy-Univocal-Fran%C3%A7ois-Laruelle/dp/1937561127/ref=pd_bxgy_b_img_y&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Trie&quot;&gt;http://en.wikipedia.org/wiki/Trie&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
 </description>
         <pubDate>Wed, 01 Apr 2015 10:52:38 -0400</pubDate>
         <link>https://github.com/idelairre/2015/04/01/trees-binary-trees-and-tries/</link>
@@ -37,7 +100,7 @@
     
       <item>
         <title>CS: bubble, merge, insertion, quick, and selection sorts</title>
-        <description>
+        <description>&lt;p&gt;&lt;i&gt;Note: Most of this information was gained from a basic Google search and is presented here for the sake of distilling some basic concepts of computer science into an easily understandable form. This post concerns the variety of sort types.&lt;/i&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 01 Apr 2015 10:52:38 -0400</pubDate>
         <link>https://github.com/idelairre/2015/04/01/sorts-bubble-merge-insertion-quick-selection/</link>
