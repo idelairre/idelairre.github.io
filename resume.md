@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Resume
-permalink: /resume/
+permalink: resume/
 comments: false
 author_footer: false
 ---
@@ -29,7 +29,7 @@ author_footer: false
 <div class="projects">
 <strong>PROJECTS</strong>
 <div class="section">
-<p><strong>Non(?)Chan, a Rails imageboard</strong>, https://github.com/idelairre/nested_comments</p> 
+<p><strong>Non(?)Chan, a Rails imageboard</strong>, https://github.com/idelairre/nested_comments</p>
 <p>A Rails implementation of the popular Futaba imageboard and forum software intended to preserve anonymity while giving users the control to manage their posts, create new threads from replies, delete replies, and squelch users.</p>
 
 <strong>Bob’s Bagels, an e-commerce webapp,</strong> https://github.com/BagelsByBob

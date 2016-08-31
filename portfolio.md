@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Portfolio
-permalink: /portfolio/
+permalink: portfolio/
 comments: false
 author_footer: false
 ---

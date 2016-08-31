@@ -4,7 +4,7 @@ author: Ian Delairre
 author_avatar: https://avatars3.githubusercontent.com/u/9040652?v=3&s=460
 email: idelairre@gmail.com
 description: Blog for web development, computer science, philosophizing.
-baseurl: "http://idelairre.github.io/" # optional
+baseurl: "" # optional
 url: "https://github.com/idelairre"
 twitter_username: idelairre
 github_username: idelairre

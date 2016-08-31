@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Resources
-permalink: /Resources/
+permalink: Resources/
 comments: false
 author_footer: false
 ---

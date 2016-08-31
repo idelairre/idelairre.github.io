@@ -2,7 +2,7 @@
 layout: post
 title: "The State of Angular in 2016"
 comments: true
-category:
+categories:
 ---
 
 I saw some haughtily titled articles ([The State of Javascript in 2016](https://medium.com/javascript-and-opinions/state-of-the-art-javascript-in-2016-ab67fc68eb0b#.i9nbs2snf) by Francois Ward and [The State of Javascript: Front-End Frameworks](https://medium.com/@sachagreif/the-state-of-javascript-front-end-frameworks-1a2d8a61510#.wixfq9jkh) by Sacha Greif) and they struck me. I cannot talk with the same breadth and authority on Angular or JavaScript but I do know--from having to hack together a project in Angular 1 in less than 2 days just now--a little bit about the "health" of Angular.
