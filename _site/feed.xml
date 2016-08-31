@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ian delairre</title>
-    <description>Blog about web development, computer science, and inevitably indulgent philosophizing.</description>
-    <link>https://github.com/idelairre/</link>
-    <atom:link href="https://github.com/idelairre/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 31 Aug 2016 06:14:23 -0400</pubDate>
-    <lastBuildDate>Wed, 31 Aug 2016 06:14:23 -0400</lastBuildDate>
+    <description>Blog for web development, computer science, philosophizing.</description>
+    <link>https://github.com/idelairrehttp://idelairre.github.io//</link>
+    <atom:link href="https://github.com/idelairrehttp://idelairre.github.io//feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 31 Aug 2016 15:44:45 -0400</pubDate>
+    <lastBuildDate>Wed, 31 Aug 2016 15:44:45 -0400</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -106,8 +106,8 @@ export default routes;
 &lt;p&gt;Besides these and a few other “gotchas” building a quick and dirty Angular 1 app in 2016 is a fast and enjoyable experience. Components are like Angular on easy mode and really reduce the intellectual overhead of using the framework. My main gripe is still modules and dependency injection. Perhaps at one point, in the days of global variables and script tags, Angular’s DI was a necessary solution but now it seems cumbersome and arcane. Hopefully, Angular 1 will further simplify.&lt;/p&gt;
 </description>
         <pubDate>Wed, 31 Aug 2016 00:00:00 -0400</pubDate>
-        <link>https://github.com/idelairre/2016/08/31/state-of-angular/</link>
-        <guid isPermaLink="true">https://github.com/idelairre/2016/08/31/state-of-angular/</guid>
+        <link>https://github.com/idelairrehttp://idelairre.github.io//2016/08/31/state-of-angular/</link>
+        <guid isPermaLink="true">https://github.com/idelairrehttp://idelairre.github.io//2016/08/31/state-of-angular/</guid>
         
         
       </item>
@@ -129,8 +129,8 @@ export default routes;
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 01 Apr 2015 10:52:38 -0400</pubDate>
-        <link>https://github.com/idelairre/2015/04/01/who-am-i-what-am-i-doing-here/</link>
-        <guid isPermaLink="true">https://github.com/idelairre/2015/04/01/who-am-i-what-am-i-doing-here/</guid>
+        <link>https://github.com/idelairrehttp://idelairre.github.io//2015/04/01/who-am-i-what-am-i-doing-here/</link>
+        <guid isPermaLink="true">https://github.com/idelairrehttp://idelairre.github.io//2015/04/01/who-am-i-what-am-i-doing-here/</guid>
         
         
       </item>
@@ -201,8 +201,8 @@ export default routes;
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 01 Apr 2015 10:52:38 -0400</pubDate>
-        <link>https://github.com/idelairre/2015/04/01/trees-binary-trees-and-tries/</link>
-        <guid isPermaLink="true">https://github.com/idelairre/2015/04/01/trees-binary-trees-and-tries/</guid>
+        <link>https://github.com/idelairrehttp://idelairre.github.io//2015/04/01/trees-binary-trees-and-tries/</link>
+        <guid isPermaLink="true">https://github.com/idelairrehttp://idelairre.github.io//2015/04/01/trees-binary-trees-and-tries/</guid>
         
         
       </item>
@@ -363,8 +363,8 @@ export default routes;
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 01 Apr 2015 10:52:38 -0400</pubDate>
-        <link>https://github.com/idelairre/2015/04/01/sorts-bubble-merge-insertion-quick-selection/</link>
-        <guid isPermaLink="true">https://github.com/idelairre/2015/04/01/sorts-bubble-merge-insertion-quick-selection/</guid>
+        <link>https://github.com/idelairrehttp://idelairre.github.io//2015/04/01/sorts-bubble-merge-insertion-quick-selection/</link>
+        <guid isPermaLink="true">https://github.com/idelairrehttp://idelairre.github.io//2015/04/01/sorts-bubble-merge-insertion-quick-selection/</guid>
         
         
       </item>
@@ -419,8 +419,8 @@ when you don’t know how many items will be in your list&lt;/li&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 01 Apr 2015 10:52:38 -0400</pubDate>
-        <link>https://github.com/idelairre/2015/04/01/abstract-data-types/</link>
-        <guid isPermaLink="true">https://github.com/idelairre/2015/04/01/abstract-data-types/</guid>
+        <link>https://github.com/idelairrehttp://idelairre.github.io//2015/04/01/abstract-data-types/</link>
+        <guid isPermaLink="true">https://github.com/idelairrehttp://idelairre.github.io//2015/04/01/abstract-data-types/</guid>
         
         
       </item>

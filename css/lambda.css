@@ -201,8 +201,8 @@ em {
     float: left;
 }
 .article-author .name {
-    margin-top: 5px;
-    float: left;
+    /*margin-top: 5px;
+    float: left;*/
 }
 .article-author h4 {
     font-size: 18px;
@@ -249,8 +249,8 @@ em {
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-.post pre.terminal code { 
-    background-color: #333; 
+.post pre.terminal code {
+    background-color: #333;
 }
 
 @media all and (max-width: 550px) {
@@ -371,5 +371,5 @@ em {
 	position: relative;
 	float: left;
 }
-	
+
 }

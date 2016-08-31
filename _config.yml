@@ -1,10 +1,10 @@
 # Site settings
 title: ian delairre
 author: Ian Delairre
-author_avatar: https://gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=50
+author_avatar: https://avatars3.githubusercontent.com/u/9040652?v=3&s=460
 email: idelairre@gmail.com
-description: Blog about web development, computer science, and inevitably indulgent philosophizing.
-baseurl: "" # optional
+description: Blog for web development, computer science, philosophizing.
+baseurl: "http://idelairre.github.io/" # optional
 url: "https://github.com/idelairre"
 twitter_username: idelairre
 github_username: idelairre

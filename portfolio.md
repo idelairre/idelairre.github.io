@@ -6,20 +6,14 @@ comments: false
 author_footer: false
 ---
 
-coming soon
+## TumblrFox
 
-<div class="technical-portfolio">
-<div class="project-1">
-</div>
-<div class="project-2">
-</div>
-<div class="project-3">
-</div>
-</div>
+A "super hacky" Tumblr chrome extension which adds a filter drop down to the Tumblr navbar.
 
-<div class="writing-portfolio">
-<div class="academia.edu">
-</div>
-<div class="word-press">
-</div>
-</div>
+[Github](https://github.com/idelairre/TumblrFox)
+
+[Chrome Store](https://chrome.google.com/webstore/detail/tumblrfox/feeecimccgpgmajhebcelhofijkdngkf)
+
+## No Subject D3
+
+A force direct graph visualizing the nosubject.com wiki.
