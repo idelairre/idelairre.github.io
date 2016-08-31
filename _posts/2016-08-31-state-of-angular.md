@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The State of Angular in 2016"
+date: 2016-08-31 6:54:00 -0400
 comments: true
 categories:
 ---

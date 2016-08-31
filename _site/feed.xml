@@ -5,8 +5,8 @@
     <description>Blog for web development, computer science, philosophizing.</description>
     <link>https://github.com/idelairre/</link>
     <atom:link href="https://github.com/idelairre/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 31 Aug 2016 18:49:22 -0400</pubDate>
-    <lastBuildDate>Wed, 31 Aug 2016 18:49:22 -0400</lastBuildDate>
+    <pubDate>Wed, 31 Aug 2016 18:55:59 -0400</pubDate>
+    <lastBuildDate>Wed, 31 Aug 2016 18:55:59 -0400</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -105,7 +105,7 @@ export default routes;
 
 &lt;p&gt;Besides these and a few other “gotchas” building a quick and dirty Angular 1 app in 2016 is a fast and enjoyable experience. Components are like Angular on easy mode and really reduce the intellectual overhead of using the framework. My main gripe is still modules and dependency injection. Perhaps at one point, in the days of global variables and script tags, Angular’s DI was a necessary solution but now it seems cumbersome and arcane. Hopefully, Angular 1 will further simplify.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 31 Aug 2016 00:00:00 -0400</pubDate>
+        <pubDate>Wed, 31 Aug 2016 06:54:00 -0400</pubDate>
         <link>https://github.com/idelairre/2016/08/31/state-of-angular/</link>
         <guid isPermaLink="true">https://github.com/idelairre/2016/08/31/state-of-angular/</guid>
         
