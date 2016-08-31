@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://github.com/idelairre/2016/08/31/state-of-angular/</loc>
+    <lastmod>2016-08-31T00:00:00-04:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://github.com/idelairre/2015/04/01/who-am-i-what-am-i-doing-here/</loc>
     <lastmod>2015-04-01T10:52:38-04:00</lastmod>
     <priority>0.8</priority>
@@ -22,37 +27,37 @@
   </url>
   <url>
     <loc>https://github.com/idelairre/404.html</loc>
-    <lastmod>2015-04-02T00:40:00-04:00</lastmod>
+    <lastmod>2016-08-31T06:07:41-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://github.com/idelairre/about/</loc>
-    <lastmod>2015-04-02T00:40:00-04:00</lastmod>
+    <lastmod>2016-08-31T06:07:41-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://github.com/idelairre/</loc>
-    <lastmod>2015-04-02T00:40:00-04:00</lastmod>
+    <lastmod>2016-08-31T06:07:41-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://github.com/idelairre/portfolio/</loc>
-    <lastmod>2015-04-02T00:40:00-04:00</lastmod>
+    <lastmod>2016-08-31T06:07:41-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://github.com/idelairre/Resources/</loc>
-    <lastmod>2015-04-02T00:40:00-04:00</lastmod>
+    <lastmod>2016-08-31T06:07:41-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://github.com/idelairre/resume/</loc>
-    <lastmod>2015-04-02T00:40:00-04:00</lastmod>
+    <lastmod>2016-08-31T06:07:41-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
