@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The State of Angular in 2016"
+title: "The State of Angular 1 in 2016"
 date: 2016-08-31 6:54:00 -0400
 comments: true
 categories:
@@ -9,6 +9,8 @@ categories:
 I saw some haughtily titled articles ([The State of Javascript in 2016](https://medium.com/javascript-and-opinions/state-of-the-art-javascript-in-2016-ab67fc68eb0b#.i9nbs2snf) by Francois Ward and [The State of Javascript: Front-End Frameworks](https://medium.com/@sachagreif/the-state-of-javascript-front-end-frameworks-1a2d8a61510#.wixfq9jkh) by Sacha Greif) and they struck me. I cannot talk with the same breadth and authority on Angular or JavaScript but I do know--from having to hack together a project in Angular 1 in less than 2 days just now--a little bit about the "health" of Angular.
 
 Its actually looking good.
+
+<!-- more -->
 
 ## tl;dr
 + Components have drastically simplified workflow and organization for Angular 1 apps

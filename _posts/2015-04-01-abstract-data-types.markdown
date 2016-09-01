@@ -11,6 +11,8 @@ categories:
 
 A queue is a simple data type which functions basically as a line (e.g., a line of cars at a tollbooth or line for a bank teller) where linearly or sequentially ordered elements are added on one end and retrieved at the other (another term for this type of data structure is “sequential collection”).[^1] Operations on the queue are limited to two types: adding elements to the end (called enqueuing) and the removal of elements from the front (dequeuing).[^2] As such, a queue is an example of a “First-In-First-Out (FIFO)” data structure where “the first element added to the queue will be the first element removed.” Queues are useful when only limited computing resources are available or can only handle a limited number of requests. In situations where system resources are scarce, the order of the data must be maintained and timeliness isn’t an issue, queues can be an appropriate way to process something like server requests.[^3]
 
+<!-- more -->
+
 <strong>queue:</strong>
 
 <img src="http://upload.wikimedia.org/wikipedia/commons/5/52/Data_Queue.svg">

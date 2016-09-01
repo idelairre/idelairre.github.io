@@ -7,7 +7,20 @@
     <title>CS: bubble, merge, insertion, quick, and selection sorts</title>
 
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="">
+    <meta name="description" content="Note: Most of this information was gained from a basic Google search and is presented here for the sake of distilling some basic concepts of computer science into an easily understandable form. This post concerns the variety of sort types.
+
+Bubble sort
+
+The first sorting method we will deal with is the bubble sort. For something like this I immediately want to know why it is called a bubble sort. Fortunately the good folks at wikibooks have an answer: “The bubble sort gets its name because elements tend to move up into the correct order like bubbles rising to the surface.”1 Interesting, so why does it have this behavior? The scary-smart brogrammer (who like myself could use some decent acne wash) who does the Harvard CS50 course explains: “the right most elements are garaunteed to be in their correct place.” He then takes the worst case scenario for sorting an array of numbers (the case that involves the most iterations) to demonstrate.
+
+
+  
+    
+      http://en.wikibooks.org/wiki/Algorithm_Implementation/Sorting/Bubble_sort &#8617;
+    
+  
+
+">
 
     
     
@@ -81,13 +94,12 @@
             <div class="entry">
 
 	<div class="entry-content">
-
 	  <header>
-	    <h1 class="entry-title"><a href=""></a></h1>
+	    <h1 class="entry-title"><a href="/2015/04/01/sorts-bubble-merge-insertion-quick-selection/">CS: bubble, merge, insertion, quick, and selection sorts</a></h1>
 	    <p class="entry-meta">
+		    Apr 1, 2015
 		    
-		    
-			<a href="index.html#disqus_thread" data-disqus-identifier=""></a>
+			<a href="/2015/04/01/sorts-bubble-merge-insertion-quick-selection/index.html#disqus_thread" data-disqus-identifier="/2015/04/01/sorts-bubble-merge-insertion-quick-selection/"></a>
 	    </p>
 	  </header>
 
@@ -95,13 +107,13 @@
 	  	
 	  		<p><i>Note: Most of this information was gained from a basic Google search and is presented here for the sake of distilling some basic concepts of computer science into an easily understandable form. This post concerns the variety of sort types.</i></p>
 
-<p><b>to do: shorten bubble sort, finish selection sort (its just citations at the moment), show code snippets from GA exercises, get computer science degree.</b></p>
-
 <h2>Bubble sort</h2>
 
 <p>The first sorting method we will deal with is the bubble sort. For something like this I immediately want to know why it is called a bubble sort. Fortunately the good folks at wikibooks have an answer: “The bubble sort gets its name because elements tend to move up into the correct order like bubbles rising to the surface.”<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> Interesting, so why does it have this behavior? The scary-smart brogrammer (who like myself could use some decent acne wash) who does the Harvard CS50 course explains: “the right most elements are garaunteed to be in their correct place.” He then takes the worst case scenario for sorting an array of numbers (the case that involves the most iterations) to demonstrate.</p>
 
-<p>If we have an array <code>[9, 6, 5, 3, 2]</code> and we iterate once then we have <code>[6, 9, 5, 3, 2]</code> on the next pass we have <code>[6, 5, 9, 3, 2]</code>. We can already see the <code>9</code> being passed to the right on each iteration so that it appears to “bubble” towards the right. </p>
+<!-- more -->
+
+<p>If we have an array <code>[9, 6, 5, 3, 2]</code> and we iterate once then we have <code>[6, 9, 5, 3, 2]</code> on the next pass we have <code>[6, 5, 9, 3, 2]</code>. We can already see the <code>9</code> being passed to the right on each iteration so that it appears to “bubble” towards the right.</p>
 
 <p>On the next iteration we have <code>[6, 5, 3, 9, 2]</code> and finally <code>[6, 5, 3, 2, 9]</code>. On the next iteration it will start with <code>6</code> thus, <code>[5, 6, 3, 2, 9]</code> then <code>[5, 3, 6, 2, 9]</code> and so on. This is clearly a very “expensive” operation (least not indicated because it was very tedious to type all those iterations). As such, its run time O of n is On<sup>2</sup>, checking every element through each iteration.</p>
 
@@ -116,7 +128,7 @@
 
 <p>Supposing you have two already sorted lists <code>[4, 15, 16, 50]</code> and <code>[8, 23, 42, 108]</code>, since they are already sorted (with the smallest elements at the left of the list) you can take each first element of the two lists and compare whether one is larger than the other. <code>4</code> is smaller so it  is entered as the first element of the new sorted list. The next task is to compare whether <code>8</code> is larger or smaller than <code>15</code>. Since <code>8</code> is smaller it enters the sorted list as the second element and so forth.</p>
 
-<p>The basic pseudo code for this sorting algorithm is to compare the first two elements of each list and remove the smaller of the two. </p>
+<p>The basic pseudo code for this sorting algorithm is to compare the first two elements of each list and remove the smaller of the two.</p>
 
 <p>On the first comparison you would have <code>[4, 8]</code> with the two remaining arrays being <code>[15, 16, 50]</code> and <code>[23, 42, 108]</code>.  On the second comparison you would have <code>[4, 8, 15, 16]</code> with the two remaining arrays being <code>[50]</code> and <code>[42, 108]</code>. On the third comparison you would have <code>[4, 8, 15, 16]</code> with the two remaining arrays being <code>[50]</code> and <code>[42, 108]</code> and so on.</p>
 
@@ -264,6 +276,7 @@
     </div>
 </div>
 
+
 	
 	    <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -277,6 +290,7 @@
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 	
+
 
 
 <script type="text/javascript">

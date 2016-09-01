@@ -8,13 +8,13 @@ categories:
 
 <i>Note: Most of this information was gained from a basic Google search and is presented here for the sake of distilling some basic concepts of computer science into an easily understandable form. This post concerns the variety of sort types.</i>
 
-<b>to do: shorten bubble sort, finish selection sort (its just citations at the moment), show code snippets from GA exercises, get computer science degree.</b>
-
 <h2>Bubble sort</h2>
 
 The first sorting method we will deal with is the bubble sort. For something like this I immediately want to know why it is called a bubble sort. Fortunately the good folks at wikibooks have an answer: "The bubble sort gets its name because elements tend to move up into the correct order like bubbles rising to the surface."[^1] Interesting, so why does it have this behavior? The scary-smart brogrammer (who like myself could use some decent acne wash) who does the Harvard CS50 course explains: "the right most elements are garaunteed to be in their correct place." He then takes the worst case scenario for sorting an array of numbers (the case that involves the most iterations) to demonstrate.
 
-If we have an array ```[9, 6, 5, 3, 2]``` and we iterate once then we have ```[6, 9, 5, 3, 2]``` on the next pass we have ```[6, 5, 9, 3, 2]```. We can already see the ```9``` being passed to the right on each iteration so that it appears to "bubble" towards the right. 
+<!-- more -->
+
+If we have an array ```[9, 6, 5, 3, 2]``` and we iterate once then we have ```[6, 9, 5, 3, 2]``` on the next pass we have ```[6, 5, 9, 3, 2]```. We can already see the ```9``` being passed to the right on each iteration so that it appears to "bubble" towards the right.
 
 On the next iteration we have ```[6, 5, 3, 9, 2]``` and finally ```[6, 5, 3, 2, 9]```. On the next iteration it will start with ```6``` thus, ```[5, 6, 3, 2, 9]``` then ```[5, 3, 6, 2, 9]``` and so on. This is clearly a very "expensive" operation (least not indicated because it was very tedious to type all those iterations). As such, its run time O of n is On<sup>2</sup>, checking every element through each iteration.
 
@@ -29,7 +29,7 @@ A merge sort, as the name suggests, merges two sorted lists. Since there is a ma
 
 Supposing you have two already sorted lists ```[4, 15, 16, 50]``` and ```[8, 23, 42, 108]```, since they are already sorted (with the smallest elements at the left of the list) you can take each first element of the two lists and compare whether one is larger than the other. ```4``` is smaller so it  is entered as the first element of the new sorted list. The next task is to compare whether ```8``` is larger or smaller than ```15```. Since ```8``` is smaller it enters the sorted list as the second element and so forth.
 
-The basic pseudo code for this sorting algorithm is to compare the first two elements of each list and remove the smaller of the two. 
+The basic pseudo code for this sorting algorithm is to compare the first two elements of each list and remove the smaller of the two.
 
 On the first comparison you would have ```[4, 8]``` with the two remaining arrays being ```[15, 16, 50]``` and ```[23, 42, 108]```.  On the second comparison you would have ```[4, 8, 15, 16]``` with the two remaining arrays being ```[50]``` and ```[42, 108]```. On the third comparison you would have ```[4, 8, 15, 16]``` with the two remaining arrays being ```[50]``` and ```[42, 108]``` and so on.
 

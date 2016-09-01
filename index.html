@@ -7,6 +7,7 @@ layout: default
   	{% assign index = true %}
 
     {% for post in site.posts %}
+  		{% assign page = post %}
   		{% include post.html %}
     {% endfor %}
 

@@ -7,7 +7,25 @@
     <title>CS: abstract data types</title>
 
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="">
+    <meta name="description" content="Note: Most of this information was gained from a basic Google search and is presented here for the sake of distilling some basic concepts of computer science into an easily understandable form. This post concerns Abstract Data Types or ADTs.
+Queues
+
+A queue is a simple data type which functions basically as a line (e.g., a line of cars at a tollbooth or line for a bank teller) where linearly or sequentially ordered elements are added on one end and retrieved at the other (another term for this type of data structure is “sequential collection”).1 Operations on the queue are limited to two types: adding elements to the end (called enqueuing) and the removal of elements from the front (dequeuing).2 As such, a queue is an example of a “First-In-First-Out (FIFO)” data structure where “the first element added to the queue will be the first element removed.” Queues are useful when only limited computing resources are available or can only handle a limited number of requests. In situations where system resources are scarce, the order of the data must be maintained and timeliness isn’t an issue, queues can be an appropriate way to process something like server requests.3
+
+
+  
+    
+      http://sdmeta.gforge.inria.fr/FreeBooks/Joy/11.pdf &#8617;
+    
+    
+      http://en.wikipedia.org/wiki/Queue_(abstract_data_type) &#8617;
+    
+    
+      http://stackoverflow.com/questions/7431054/when-where-how-should-queues-be-used &#8617;
+    
+  
+
+">
 
     
     
@@ -81,13 +99,12 @@
             <div class="entry">
 
 	<div class="entry-content">
-
 	  <header>
-	    <h1 class="entry-title"><a href=""></a></h1>
+	    <h1 class="entry-title"><a href="/2015/04/01/abstract-data-types/">CS: abstract data types</a></h1>
 	    <p class="entry-meta">
+		    Apr 1, 2015
 		    
-		    
-			<a href="index.html#disqus_thread" data-disqus-identifier=""></a>
+			<a href="/2015/04/01/abstract-data-types/index.html#disqus_thread" data-disqus-identifier="/2015/04/01/abstract-data-types/"></a>
 	    </p>
 	  </header>
 
@@ -97,6 +114,8 @@
 <h2>Queues</h2>
 
 <p>A queue is a simple data type which functions basically as a line (e.g., a line of cars at a tollbooth or line for a bank teller) where linearly or sequentially ordered elements are added on one end and retrieved at the other (another term for this type of data structure is “sequential collection”).<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> Operations on the queue are limited to two types: adding elements to the end (called enqueuing) and the removal of elements from the front (dequeuing).<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> As such, a queue is an example of a “First-In-First-Out (FIFO)” data structure where “the first element added to the queue will be the first element removed.” Queues are useful when only limited computing resources are available or can only handle a limited number of requests. In situations where system resources are scarce, the order of the data must be maintained and timeliness isn’t an issue, queues can be an appropriate way to process something like server requests.<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup></p>
+
+<!-- more -->
 
 <p><strong>queue:</strong></p>
 
@@ -158,6 +177,7 @@ when you don’t know how many items will be in your list</li>
     </div>
 </div>
 
+
 	
 	    <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -171,6 +191,7 @@ when you don’t know how many items will be in your list</li>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 	
+
 
 
 <script type="text/javascript">

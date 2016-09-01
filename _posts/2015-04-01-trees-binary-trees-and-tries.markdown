@@ -8,8 +8,6 @@ categories:
 
 <i>Note: Most of this information was gained from a basic Google search and is presented here for the sake of distilling some basic concepts of computer science into an easily understandable form. This post concerns Tree data structures.</i>
 
-<b>to do: fill out citations, show code snippets from GA exercises, finish tries section, add a little somethin'-somethin' on graph theory.</b>
-
 <strong>tree/shameless Laruelle plug:</strong>[^1]
 <img src="http://rosettacode.org/mw/images/d/d7/Fractal_tree.svg">
 
@@ -17,6 +15,8 @@ categories:
 <p>A tree is a data structure that consists of a parent or root node which stores a data element and which possesses at least one child or branch. These child nodes in turn possess their own values and may have their own children (note: all nodes have 1 parent except for the root node which has 0).</p>
 
 <p>Trees are particularly useful for storing heirarchically arranged data. They are also very human readable since their visual organization resembles that of an actual tree. Further, for a relatively complex data structure (relative to a stack or queue) they can be traversed or "<a href="http://en.wikipedia.org/wiki/Tree_traversal">walked</a>" through relatively quickly, although this is highly dependent on their depth. Further, in the case of natural language processing, a large corpus of text can be stored as a tree which significantly reduces the query time required to find a sequence of words (as is the case with <a href="http://en.wikipedia.org/wiki/N-gram"><i>n</i>-grams)</a> and the memory requirements for its storage.</p>
+
+<!-- more -->
 
 Since this terminology can become somewhat convoluted I've provided a list of terms (note: these terms courtesy of the internet).[^2]
 
@@ -56,5 +56,5 @@ More on this later (with code snippets and more!)
 
 [^1]: <a href="http://www.amazon.com/Philosophy-Non-Philosophy-Univocal-Fran%C3%A7ois-Laruelle/dp/1937561127/ref=pd_bxgy_b_img_y">http://www.amazon.com/Philosophy-Non-Philosophy-Univocal-Fran%C3%A7ois-Laruelle/dp/1937561127/ref=pd_bxgy_b_img_y</a>
 
-[^2]: 
+[^2]:
 [^3]: <a href="http://en.wikipedia.org/wiki/Trie">http://en.wikipedia.org/wiki/Trie</a>
