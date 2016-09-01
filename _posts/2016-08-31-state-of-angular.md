@@ -27,11 +27,9 @@ The app needed drastic changes (it was using Grunt and Bower, dark days) and not
 ## Problems immediately: module loading
 I found an Angular 1 es6 starter repo and began my genius work of copying and pasting their webpack configuration wholesale, splitting the views and controllers into components, adding import and export statements and glancing at documentation. When everything was mostly in order, I decided to bring the app back to life one piece at a time in the router and immediately into this gloriously descriptive error:
 
-
     angular.js:68Uncaught Error: [$injector:modulerr] Failed to instantiate module pollingApp due to:
     Error: [$injector:modulerr] Failed to instantiate module {"_invokeQueue":[],"_configBlocks":[],"_runBlocks":[],"requires":["edit","login","main","nav","result","survey"],"name":"components"} due to:
     Error: [ng:areq] Argument 'module' is not a function, got Object
-
 
 Angular's error messages are terrible. This error, back in the day, was thrown if a module's array of dependencies was malformed but with es6 modules it adds a layer of confusion. A Google search of this exact problem will produce not a lot in the way of how or why this is the case. Although you may come across [this stack exchange post](http://stackoverflow.com/questions/30794824/error-ngareq-argument-module-is-not-a-function-got-object).
 
