@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>ian delairre</title>
+  
+      <meta name="viewport" content="width=device-width">
+      <meta name="description" content="Blog for web development, computer science, and sometimes philosophy.">
+  
+      
+  
+  
+      <link rel="canonical" href="https://idelairre.github.io/jekyll-is-broken">
+      <link rel="icon" type="image/png" href="/images/lambda-xl.png">
+  
+      <!-- Custom CSS -->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+      <link rel="stylesheet" href="./css/syntax.css">
+      <link rel="stylesheet" href="./css/lambda.css">
+  </head>
+  <body>
+    <div class="wrapper">
+    <header id="main-header">
+      <div id="site-title">
+        <img src="/images/fox_black.png" alt="fox" height="42" width="55">
+        <a href="/">ian delairre</a>
+      </div>
+      <div class="links">
+      <a href="/" class="page-link active">Blog</a> <!-- this will have to change -->
+        <a class="page-link active" href="about">About</a>
+        <a class="page-link active" href="portfolio">Portfolio</a>
+        <a class="page-link active" href="resume">Resume</a>
+      <a href="/feed.xml" target="_blank" class="page-link">RSS</a>
+      <a href="https://github.com/idelairre/idelairre.github.io" target="_blank" class="page-link github-link">
+        <img src="/images/github-repo.png" alt="Github Repository">Source</a>
+      </div>
+    </header>
+    <div id="content">
+      <div id="article">
+        <div class="article-list">
+          <div class="entry">
+	<div class="entry-content">
+	  <header>
+	    <h1 class="entry-title"><a href="/jekyll-is-broken">Jekyll is broken</a></h1>
+	    <p class="entry-meta">
+		    2016-09-6 6:54:00 -0400
+		    
+			<a href="/jekyll-is-brokenindex.html#disqus_thread" data-disqus-identifier="/jekyll-is-broken"></a>
+	    </p>
+	  </header>
+	  <article class="entry-body">
+	     <p>I'm practicing my controversial developer opinion piece blogging skills. Jekyll is not broken for everyone but it is behaving poorly for me, so I created my own static blog generator. My motivation stems from the fact that, after a year of working with JavaScript front-end frameworks and dabbling in Node, Jekyll's liquid templates, Ruby rake tasks, and what-not are looking just a little foreign and over-engineered. I'm also increasingly a fan of building my own tools and doing things in "my own style" when it comes to programming.</p>
+<!-- more -->
+<p>After trying a few static blogging platforms such as Hexo, I can say the developer ergonomics for JavaScript front-end frameworks really outclass any static blogging platform. There really should be a way to make the experience of building a static site more like building a componentized webapp. That is to say, it should not be painful to build a static site if I can program and "oh my God why is this so 'effing silly" should not be my reaction to using a static blog generator which is meant to make things easier.</p>
+<p>So far, my experimental "framework" is looking a lot like Backbone, which I have much love for after developing my Chrome extension for Tumblr. Maybe this is a little archaic but I wanted to create something that would allow the creating of simple files that would export an overgalvanized hash containing a template, its data, and some rendering logic. More complex es6 classes could also be accommodated if I wanted to experiment with things like decorators. I also wanted to include the flexibility of using whatever template engine.</p>
+<p>At this point it is unclear whether the "framework" is anything besides a few classes that give context to Handlebars templates and partials. However, I'm hoping the generation of the site, or the compilation of its html files, can be handled by a class that resembles a Backbone or Angular router which would treat routes as filesystem paths.</p>
+<p>So far this logic is exposed and is not intrinsic to the framework. However, I'm hoping to take the messiness of dealing with the filesystem out of the user's hands. At this moment, the framework's organization and logic is pretty well tied to this static site, so it isn't really a framework. But I figure, since I'm now "going long" on this project--its my only way of updating my personal github.io page, I'll be expanding and simplifying it so the actual workflow of creating pages and posts precludes dealing with any programming. That'll be fun.</p>
+<p>At least one other person has recommended creating your own static blog generator, I can only add chorus to this, especially since it has proved an intellectual exercise to reason out what the framework is, its api, and how and what to delegate to it. Here's to the future.</p>
+
+	  </article>
+  </div>
+</div>
+
+	<div class="article-author">
+	    <div class="avatar">
+	      <img width="50" height="50" src="https://avatars3.githubusercontent.com/u/9040652?v&#x3D;3&amp;s&#x3D;460" alt="Ian Delairre Avatar"/>
+	    </div>
+	    <div class="name">
+	        <h4>Assembled by <b>Ian Delairre</b> </h4>
+	        Web developer into computer science, philosophy and psychoanalysis.
+	    </div>
+	</div>
+
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+	  var disqus_shortname = 'idelairre';
+		(function() {
+		    var dsq = document.createElement('script');
+	      dsq.type = 'text/javascript';
+	      dsq.async = true;
+		    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+		    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<script type="text/javascript">
+	  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	  var disqus_shortname = 'idelairre'; // required: replace example with your forum shortname
+	  var disqus_identifier = '';
+	
+	  /* * * DON'T EDIT BELOW THIS LINE * * */
+	  (function () {
+	  var s = document.createElement('script'); s.async = true;
+	  s.type = 'text/javascript';
+	  s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+	  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+	  }());
+	</script>
+
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+    	<div class="wrap">
+    		<h2 class="footer-heading">ian delairre</h2>
+    		<div class="footer-col-1 column">
+    			<div class="avatar">
+    				<img width="50" height="50" src="/images/source_code-512.png"/>
+    			</div>
+    			<div class="info">
+    				<ul>
+    					<li><a href="mailto:idelairre@gmail.com">idelairre@gmail.com</a>
+    					</li>
+    				</ul>
+    			</div>
+    		</div>
+    		<div class="footer-col-2 column">
+    <!--
+    			<ul>
+    				{% if site.github_username %}
+    				<li>
+    					<a href="https://github.com/">
+    						<span class="icon github"><img src="/images/github-repo.png" alt="Github Repository">
+                </span>
+    						<span class="username"> </span>
+    					</a>
+    				</li>{% endif %} {% if site.twitter_username %}
+    				<li>
+    					<a href="https://twitter.com/">
+    						<span class="icon-twitter"><img align="left" width=22 height=22 src="/images/twitter_circle_black-512.png" alt="twitter link"></span>
+    						<span class="username"> </span>
+    					</a>
+    				</li>{% endif %}
+    			</ul>
+    -->
+    		</div>
+    		<div class="footer-col-3 column">
+    			<p class="text">Blog for web development, computer science, and sometimes philosophy.</p>
+    		</div>
+    	</div>
+    </footer>
+  </div>
+  </body>
+  <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+  </script>
+</html>

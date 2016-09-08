@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>ian delairre</title>
+  
+      <meta name="viewport" content="width=device-width">
+      <meta name="description" content="Blog for web development, computer science, and sometimes philosophy.">
+  
+      
+  
+  
+      <link rel="canonical" href="https://idelairre.github.io/the-state-of-angular-1-in-2016">
+      <link rel="icon" type="image/png" href="/images/lambda-xl.png">
+  
+      <!-- Custom CSS -->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+      <link rel="stylesheet" href="./css/syntax.css">
+      <link rel="stylesheet" href="./css/lambda.css">
+  </head>
+  <body>
+    <div class="wrapper">
+    <header id="main-header">
+      <div id="site-title">
+        <img src="/images/fox_black.png" alt="fox" height="42" width="55">
+        <a href="/">ian delairre</a>
+      </div>
+      <div class="links">
+      <a href="/" class="page-link active">Blog</a> <!-- this will have to change -->
+        <a class="page-link active" href="about">About</a>
+        <a class="page-link active" href="portfolio">Portfolio</a>
+        <a class="page-link active" href="resume">Resume</a>
+      <a href="/feed.xml" target="_blank" class="page-link">RSS</a>
+      <a href="https://github.com/idelairre/idelairre.github.io" target="_blank" class="page-link github-link">
+        <img src="/images/github-repo.png" alt="Github Repository">Source</a>
+      </div>
+    </header>
+    <div id="content">
+      <div id="article">
+        <div class="article-list">
+          <div class="entry">
+	<div class="entry-content">
+	  <header>
+	    <h1 class="entry-title"><a href="/the-state-of-angular-1-in-2016">The State of Angular 1 in 2016</a></h1>
+	    <p class="entry-meta">
+		    2016-08-31 6:54:00 -0400
+		    
+			<a href="/the-state-of-angular-1-in-2016index.html#disqus_thread" data-disqus-identifier="/the-state-of-angular-1-in-2016"></a>
+	    </p>
+	  </header>
+	  <article class="entry-body">
+	     <p>I saw some haughtily titled articles (<a href="https://medium.com/javascript-and-opinions/state-of-the-art-javascript-in-2016-ab67fc68eb0b#.i9nbs2snf">The State of Javascript in 2016</a> by Francois Ward and <a href="https://medium.com/@sachagreif/the-state-of-javascript-front-end-frameworks-1a2d8a61510#.wixfq9jkh">The State of Javascript: Front-End Frameworks</a> by Sacha Greif) and they struck me. I cannot talk with the same breadth and authority on Angular or JavaScript but I do know--from having to hack together a project in Angular 1 in less than 2 days just now--a little bit about the "health" of Angular.</p>
+<p>Its actually looking good.</p>
+<!-- more -->
+<h2 id="tl-dr">tl;dr</h2>
+<ul>
+<li>Components have drastically simplified workflow and organization for Angular 1 apps</li>
+<li>Google's new component router is currently broken and the old router is unusable for components.</li>
+<li>It is entirely necessary to use the beta version of angular-ui-router for component routing.</li>
+<li>es6 style imports have vastly simplified things in terms of organization and file-structure, however, it is still very unclear and inconsistent between libraries when to import a variable, whether or not that variable represents a module name (is a string) or an actual angular module, (e.g. <a href="https://github.com/angular-ui/ui-router/issues/2506">this issue for the new ui-router</a>).</li>
+<li>exporting modules using es6 syntax is also weird since module "names" are exported.</li>
+<li>Angular doesn't exactly jive with classes for controllers and controller classes are not supported by third party dependency injection libraries (such as ng-annotate).</li>
+<li>Using libraries like <a href="https://github.com/ngUpgraders/ng-forward">ng-forward</a> (which is no longer maintained) or <a href="https://github.com/ngParty/ng-metadata">ng-metadata</a> (which is pure Typescript) can reconcile Angular 1's weird way of handling modules with es6 and allow you to use new JS features but do not actually make Angular 1 apps "Angular 2 ready" as much as they claim, especially if you app relies heavily on libraries like "Angular Material" or "UI-bootstrap"</li>
+</ul>
+<h2 id="the-story">The story</h2>
+<p>So my sister needed a survey app since all the ones online were ad supported and sucky, I vaguely remembered forking a survey app about a year ago and modifying it here and there (for some market research on an app that didn't happen) so I offered to modify my app for her.</p>
+<p>The app needed drastic changes (it was using Grunt and Bower, dark days) and noticeably simply didn't work (maybe because I was working on Windows, who knows?), so I figured I would make a day of it and refactor it. Not so hard, right?</p>
+<h2 id="problems-immediately-module-loading">Problems immediately: module loading</h2>
+<p>I found an Angular 1 es6 starter repo and began my genius work of copying and pasting their webpack configuration wholesale, splitting the views and controllers into components, adding import and export statements and glancing at documentation. When everything was mostly in order, I decided to bring the app back to life one piece at a time in the router and immediately into this gloriously descriptive error:</p>
+<pre><code>angular.js:68Uncaught Error: [$injector:modulerr] Failed to instantiate module pollingApp due to:
+Error: [$injector:modulerr] Failed to instantiate module {"_invokeQueue":[],"_configBlocks":[],"_runBlocks":[],"requires":["edit","login","main","nav","result","survey"],"name":"components"} due to:
+Error: [ng:areq] Argument 'module' is not a function, got Object
+</code></pre><p>Angular's error messages are terrible. This error, back in the day, was thrown if a module's array of dependencies was malformed but with es6 modules it adds a layer of confusion. A Google search of this exact problem will produce not a lot in the way of how or why this is the case. Although you may come across <a href="http://stackoverflow.com/questions/30794824/error-ngareq-argument-module-is-not-a-function-got-object">this stack exchange post</a>.</p>
+<p>It turns out Angular modules are not CommonJS modules at all and that you have to export a module's <code>name</code> attribute so Angular can handle it with its internal module system. Has this always been the case? Bizarre.</p>
+<p><em>Note: this issue applies to a number of Angular libraries as well. If you've ever wondered indefinitely whether to load the module then add it as a string to your angular module dependencies or to import a variable and add that to your dependencies or import a variable and then add its <code>name</code> attribute to your dependencies this is why. However, it looks like a few major libraries are on board with supporting es6 modules, e.g. <a href="https://github.com/angular-ui/ui-router/issues/2506">ui-router</a></em></p>
+<h2 id="the-official-component-router-is-broken">The official component router is broken</h2>
+<p>Components. Are. Great. Components are the future (nevermind that Angular components somewhat resemble Backbone views). Refactoring old Angular controllers and views into components is not too difficult, --even an enjoyable, task. However, it may not be immediately apparent how these new components jive with Angular's router(s) (there are currently three official routers). At this time, they don't, at least officially, since <a href="(http://stackoverflow.com/questions/33652668/angular-1-5-and-new-component-router">the new component router has been deprecated and they are working on a new API</a>).</p>
+<p>Whatever the state of Angular's router, the new UI-router (angular-ui-router@1.0.0-beta.1) handles components beautifully with a very simple api. It needs little in the way of explanation:</p>
+<pre><code>const routes = function($stateProvider, $urlRouterProvider) {
+  /* @ngInject */
+
+  $stateProvider
+    .state('edit', {
+      url: '/edit',
+      component: 'editComponent'
+  });
+
+  $stateProvider
+    .state('main', {
+      url: '/main',
+      component: 'mainComponent'
+  });
+
+  $stateProvider
+    .state('result', {
+      url: '/result',
+      component: 'resultComponent'
+  });
+
+  $urlRouterProvider.otherwise('main');
+}
+
+export default routes;
+</code></pre><p>It is clear this is the solution for component routing at this time.</p>
+<h2 id="why-not-ng-forward-or-ng-metadata-">Why not ng-forward or ng-metadata?</h2>
+<p>Interesting. I spent a fair amount of time working on two ng-forward projects with the intent to carry them over to Angular 2. It is true that ng-forward handles a lot of Angular's weirdness in terms of module loading (it automagically handles and loads the <code>name</code> attribute when you load your dependencies). I found that I could think in pure JavaScript more frequently, break away from Angular's services (like <code>$http</code>) and use vanilla JS libraries, and used those projects to explore making decorators and using other es6-7 features. However, two points made using ng-forward a deal breaker:</p>
+<ol>
+<li>not one of the components I made for those projects, as far as I am aware, is usable by a pure Angular app.</li>
+<li>I was still unable to escape the need to manipulate the <code>$scope</code> digest cycle.</li>
+</ol>
+<p>Thus, they are weird mutant apps that will probably never make it to Angular 2 since they rely on libraries programmed "in and for Angular" like Angular Material and UI-Bootstrap and are not backward compatible with Angular 1. The fact that <a href="https://github.com/ngUpgraders/ng-forward/issues/174">ng-forward is no longer maintained</a> was the nail in the coffin. The only hope for the future of these apps is that Angular 2 versions of their current UI frameworks will become mature enough for me to refactor my app with them--starting the cycle of dependency anew.</p>
+<p>Ng-metadata more strongly prohibits developers from doing things like manipulating the digest cycle (by simple making it not available). As a framework, it is much more disciplinary since the Typescript requirement makes the addition of third-party libraries a more costly decision. However, ng-metadata added too much overhead for a simple quiz app.</p>
+<p>As an aside, ng-metadata so thoroughly imitates Angular 2, I can't see a reason to use it instead of actually making an Angular 2 app.</p>
+<p>Angular 1 components are robust enough even without es6 classes, decorators and other sugar. In fact, they solve many of the problems that have plagued the framework by isolating their responsibility to their view and data (e.g., their scope is isolated, they have "well defined" life-cycle hooks so there is no question of whether a controller or directive should handle view logic first, they have a "well defined" api so you aren't trying to piece together what a model looks like from html templates and controller code, etc...) and allowing developers to organize their apps according to a component hierarchy.</p>
+<h2 id="minification-is-still-a-problem">Minification is still a problem</h2>
+<p>When it came time to deploy, I had all but forgotten this famous gotcha. Do not mangle your variable names when you minify your JavaScript.</p>
+<h2 id="wrap-up">Wrap up</h2>
+<p>Angular is still a bear. I find its template syntax to be awkward, its directives cumbersome, and I don't like how it imperializes my way of thinking and programming (i.e., I don't like how there is an "angular version" of everything or an "angular way of doing" this or that). However, if I need a project or prototype working by myself in like two days, Angular is still my goto framework.</p>
+<p>Besides these and a few other "gotchas" building a quick and dirty Angular 1 app in 2016 is a fast and enjoyable experience. Components are like Angular on easy mode and really reduce the intellectual overhead of using the framework. My main gripe is still modules and dependency injection. Perhaps at one point, in the days of global variables and script tags, Angular's DI was a necessary solution but now it seems cumbersome and arcane. Hopefully, Angular 1 will further simplify.</p>
+
+	  </article>
+  </div>
+</div>
+
+	<div class="article-author">
+	    <div class="avatar">
+	      <img width="50" height="50" src="https://avatars3.githubusercontent.com/u/9040652?v&#x3D;3&amp;s&#x3D;460" alt="Ian Delairre Avatar"/>
+	    </div>
+	    <div class="name">
+	        <h4>Assembled by <b>Ian Delairre</b> </h4>
+	        Web developer into computer science, philosophy and psychoanalysis.
+	    </div>
+	</div>
+
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+	  var disqus_shortname = 'idelairre';
+		(function() {
+		    var dsq = document.createElement('script');
+	      dsq.type = 'text/javascript';
+	      dsq.async = true;
+		    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+		    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<script type="text/javascript">
+	  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	  var disqus_shortname = 'idelairre'; // required: replace example with your forum shortname
+	  var disqus_identifier = '';
+	
+	  /* * * DON'T EDIT BELOW THIS LINE * * */
+	  (function () {
+	  var s = document.createElement('script'); s.async = true;
+	  s.type = 'text/javascript';
+	  s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+	  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+	  }());
+	</script>
+
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+    	<div class="wrap">
+    		<h2 class="footer-heading">ian delairre</h2>
+    		<div class="footer-col-1 column">
+    			<div class="avatar">
+    				<img width="50" height="50" src="/images/source_code-512.png"/>
+    			</div>
+    			<div class="info">
+    				<ul>
+    					<li><a href="mailto:idelairre@gmail.com">idelairre@gmail.com</a>
+    					</li>
+    				</ul>
+    			</div>
+    		</div>
+    		<div class="footer-col-2 column">
+    <!--
+    			<ul>
+    				{% if site.github_username %}
+    				<li>
+    					<a href="https://github.com/">
+    						<span class="icon github"><img src="/images/github-repo.png" alt="Github Repository">
+                </span>
+    						<span class="username"> </span>
+    					</a>
+    				</li>{% endif %} {% if site.twitter_username %}
+    				<li>
+    					<a href="https://twitter.com/">
+    						<span class="icon-twitter"><img align="left" width=22 height=22 src="/images/twitter_circle_black-512.png" alt="twitter link"></span>
+    						<span class="username"> </span>
+    					</a>
+    				</li>{% endif %}
+    			</ul>
+    -->
+    		</div>
+    		<div class="footer-col-3 column">
+    			<p class="text">Blog for web development, computer science, and sometimes philosophy.</p>
+    		</div>
+    	</div>
+    </footer>
+  </div>
+  </body>
+  <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+  </script>
+</html>

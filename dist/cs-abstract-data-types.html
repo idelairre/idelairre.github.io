@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>ian delairre</title>
+  
+      <meta name="viewport" content="width=device-width">
+      <meta name="description" content="Blog for web development, computer science, and sometimes philosophy.">
+  
+      
+  
+  
+      <link rel="canonical" href="https://idelairre.github.io/cs-abstract-data-types">
+      <link rel="icon" type="image/png" href="/images/lambda-xl.png">
+  
+      <!-- Custom CSS -->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+      <link rel="stylesheet" href="./css/syntax.css">
+      <link rel="stylesheet" href="./css/lambda.css">
+  </head>
+  <body>
+    <div class="wrapper">
+    <header id="main-header">
+      <div id="site-title">
+        <img src="/images/fox_black.png" alt="fox" height="42" width="55">
+        <a href="/">ian delairre</a>
+      </div>
+      <div class="links">
+      <a href="/" class="page-link active">Blog</a> <!-- this will have to change -->
+        <a class="page-link active" href="about">About</a>
+        <a class="page-link active" href="portfolio">Portfolio</a>
+        <a class="page-link active" href="resume">Resume</a>
+      <a href="/feed.xml" target="_blank" class="page-link">RSS</a>
+      <a href="https://github.com/idelairre/idelairre.github.io" target="_blank" class="page-link github-link">
+        <img src="/images/github-repo.png" alt="Github Repository">Source</a>
+      </div>
+    </header>
+    <div id="content">
+      <div id="article">
+        <div class="article-list">
+          <div class="entry">
+	<div class="entry-content">
+	  <header>
+	    <h1 class="entry-title"><a href="/cs-abstract-data-types">CS: abstract data types</a></h1>
+	    <p class="entry-meta">
+		    2015-04-01 10:52:38 -0400
+		    
+			<a href="/cs-abstract-data-typesindex.html#disqus_thread" data-disqus-identifier="/cs-abstract-data-types"></a>
+	    </p>
+	  </header>
+	  <article class="entry-body">
+	     <p><i>Note: Most of this information was gained from a basic Google search and is presented here for the sake of distilling some basic concepts of computer science into an easily understandable form. This post concerns Abstract Data Types or ADTs.</i></p>
+<h2>Queues</h2>
+
+<p>A queue is a simple data type which functions basically as a line (e.g., a line of cars at a tollbooth or line for a bank teller) where linearly or sequentially ordered elements are added on one end and retrieved at the other (another term for this type of data structure is “sequential collection”).[^1] Operations on the queue are limited to two types: adding elements to the end (called enqueuing) and the removal of elements from the front (dequeuing).[^2] As such, a queue is an example of a “First-In-First-Out (FIFO)” data structure where “the first element added to the queue will be the first element removed.” Queues are useful when only limited computing resources are available or can only handle a limited number of requests. In situations where system resources are scarce, the order of the data must be maintained and timeliness isn’t an issue, queues can be an appropriate way to process something like server requests.[^3]</p>
+<!-- more -->
+<p><strong>queue:</strong></p>
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/5/52/Data_Queue.svg"></p>
+<h2>Stacks</h2>
+
+<p>Queues are similar to stacks (they are both sequential collections and linear data structures) with the primary difference being that a stack is a “Last-In-First-Out” (LIFO) as opposed to FIFO data structure. Or rephrased, all the operations on a stack are done at the end or back of the collection whereas in a queue they are performed at the front and back. Again rephrased, in a queue, operations on the first element are processed first whereas, in a stack, operations are performed on the last or most recently added element first. Stacks are also limited to two operations: “pushing” and “popping.” A push adds an element to a collection, whereas a pop removes the last element that was added. Stacks can be implemented when task priority is important (e.g., from a user experience standpoint, the most recent request to a server should be processed first) or the tasks are event-based (where certain event-based operations should be processed immediately rather than queued).</p>
+<p><strong>stack:</strong></p>
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/2/29/Data_stack.svg"></p>
+<h2>Linked List</h2>
+
+<p>A more versatile data type (in the sense that operations can be performed at any place in the collection) is the linked list. Linked lists also possess the benefit that one does not need to specify a fixed size of the list (as is the case with arrays). As such it has more intuitive behavior than an array, i.e., adding elements to the list causes the list to get bigger. Since linked lists are comprised of nodes “linked” together in a sequence insertion and deletion can occur at any part of the collection by using the appropriate node as a reference (e.g., the C functions “insertBefore()” and “insertAfter()” which take a node as a parameter).[^4] Linked lists can also be copied, searched and or merged with other lists into a larger list. Each node (with the exception of the last element) possesses a reference which links it to the next node in the sequence. Linked lists can be linked in a linear (where the last element has “null” for a reference) or circular fashion (where the last element has a reference to the first or header node) and singly and doubly linked. Singly linked lists can only be traversed in one direction (left to right) whereas doubly linked lists can be traversed in any direction. Linked lists are a preferable data type when:</p>
+<li>time predictability is crucial since the O of n is constant</li>
+<li>you don’t need to index the values of the array
+when you don’t know how many items will be in your list</li>
+<li>when you need to insert items at any point in the list</li>
+
+<p><strong>linked list:</strong></p>
+<p><img src="http://mike-lipman.com/images/linked-list.png"></p>
+<p>[^1]: <a href="http://sdmeta.gforge.inria.fr/FreeBooks/Joy/11.pdf">http://sdmeta.gforge.inria.fr/FreeBooks/Joy/11.pdf</a></p>
+<p>[^2]: <a href="http://en.wikipedia.org/wiki/Queue_(abstract_data_type)">http://en.wikipedia.org/wiki/Queue_(abstract_data_type)</a></p>
+<p>[^3]: <a href="http://stackoverflow.com/questions/7431054/when-where-how-should-queues-be-used">http://stackoverflow.com/questions/7431054/when-where-how-should-queues-be-used</a></p>
+<p>[^4]: <a href="https://books.google.com/books?id=NdVS88muul4C&printsec=frontcover#v=onepage&q&f=false">https://books.google.com/books?id=NdVS88muul4C&printsec=frontcover#v=onepage&q&f=false"</a></p>
+
+	  </article>
+  </div>
+</div>
+
+	<div class="article-author">
+	    <div class="avatar">
+	      <img width="50" height="50" src="https://avatars3.githubusercontent.com/u/9040652?v&#x3D;3&amp;s&#x3D;460" alt="Ian Delairre Avatar"/>
+	    </div>
+	    <div class="name">
+	        <h4>Assembled by <b>Ian Delairre</b> </h4>
+	        Web developer into computer science, philosophy and psychoanalysis.
+	    </div>
+	</div>
+
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+	  var disqus_shortname = 'idelairre';
+		(function() {
+		    var dsq = document.createElement('script');
+	      dsq.type = 'text/javascript';
+	      dsq.async = true;
+		    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+		    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<script type="text/javascript">
+	  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	  var disqus_shortname = 'idelairre'; // required: replace example with your forum shortname
+	  var disqus_identifier = '';
+	
+	  /* * * DON'T EDIT BELOW THIS LINE * * */
+	  (function () {
+	  var s = document.createElement('script'); s.async = true;
+	  s.type = 'text/javascript';
+	  s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+	  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+	  }());
+	</script>
+
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+    	<div class="wrap">
+    		<h2 class="footer-heading">ian delairre</h2>
+    		<div class="footer-col-1 column">
+    			<div class="avatar">
+    				<img width="50" height="50" src="/images/source_code-512.png"/>
+    			</div>
+    			<div class="info">
+    				<ul>
+    					<li><a href="mailto:idelairre@gmail.com">idelairre@gmail.com</a>
+    					</li>
+    				</ul>
+    			</div>
+    		</div>
+    		<div class="footer-col-2 column">
+    <!--
+    			<ul>
+    				{% if site.github_username %}
+    				<li>
+    					<a href="https://github.com/">
+    						<span class="icon github"><img src="/images/github-repo.png" alt="Github Repository">
+                </span>
+    						<span class="username"> </span>
+    					</a>
+    				</li>{% endif %} {% if site.twitter_username %}
+    				<li>
+    					<a href="https://twitter.com/">
+    						<span class="icon-twitter"><img align="left" width=22 height=22 src="/images/twitter_circle_black-512.png" alt="twitter link"></span>
+    						<span class="username"> </span>
+    					</a>
+    				</li>{% endif %}
+    			</ul>
+    -->
+    		</div>
+    		<div class="footer-col-3 column">
+    			<p class="text">Blog for web development, computer science, and sometimes philosophy.</p>
+    		</div>
+    	</div>
+    </footer>
+  </div>
+  </body>
+  <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+  </script>
+</html>
