@@ -292,6 +292,10 @@ em {
 	padding-left: 5px;
 }
 
+.username a {
+  text-decoration: none;
+}
+
 .icon-twitter {
 	position: relative;
 	margin-right: 2px;
