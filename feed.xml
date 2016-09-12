@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xml" href="https://idelairre.github.io/feed.xslt.xml"?>
+<feed xmlns="https://github.com/dylang/node-rss">
+  <generator uri="https://github.com/idelairre/static-blog-generator" version="">Node RSS</generator>
+  <link href="" rel="self" type="application/atom+xml" />
+  <link href="/" rel="alternate" type="text/html" />
+  <updated></updated>
+  <id>https://idelairre.github.io/</id>
+
+    <title type="html">ian delairre</title>
+
+    <subtitle>Blog for web development, computer science, and sometimes philosophy.</subtitle>
+
+    <author>
+        <name>Ian Delairre</name>
+        <email>idelairre@gmail.com</email>
+    </author>
+
+    <entry>
+      <title type="html">Hatred of Angular</title>
+      <link href="/hatred-of-angular" rel="alternate" type="text/html" title="Hatred of Angular" />
+      <published>2016-09-15 15:10:15 -0400</published>
+        <updated>2016-09-15 15:10:15 -0400</updated>
+
+      <id></id>
+      <content type="html" xml:base=""></content>
+
+        <author>
+            <name>Ian Delairre</name>
+            <email></email>
+        </author>
+
+
+
+        <summary type="html">&lt;p&gt;I&#x27;ve been booting up some old Angular projects and found myself running into retrospectives on Angular and numerous articles about &quot;Why Angular will fail&quot;, e.g., &lt;a href&#x3D;&quot;https://gist.github.com/tdd/5ba48ba5a2a179f2d0fa&quot;&gt;&quot;Angular, just say no&quot;&lt;/a&gt; which explains &quot;why you should avoid the entire thing at all costs unless you want to spend the next few years in hell.&quot; The points these articles make about Angular&#x27;s somewhat unstructured development, changing goals, audience and requirements are interesting. Some of the comparisons are arbitrary, e.g., comparing Angular to jQuery, but most of these pieces are well considered. &lt;a href&#x3D;&quot;http://www.quirksmode.org/blog/archives/2015/01/the_problem_wit.html&quot;&gt;&quot;The Problem with Angular&quot;&lt;/a&gt; is particularly interesting because it reveals Angular&#x27;s paradoxical design motivations, which I see as the heart of the matter.&lt;/p&gt;
+</summary>
+
+    </entry>
+    <entry>
+      <title type="html">Jekyll is broken</title>
+      <link href="/jekyll-is-broken" rel="alternate" type="text/html" title="Jekyll is broken" />
+      <published>2016-09-6 6:54:00 -0400</published>
+        <updated>2016-09-6 6:54:00 -0400</updated>
+
+      <id></id>
+      <content type="html" xml:base=""></content>
+
+        <author>
+            <name>Ian Delairre</name>
+            <email></email>
+        </author>
+
+
+
+        <summary type="html">&lt;p&gt;I&#x27;m practicing my controversial developer opinion piece blogging skills. Jekyll is not broken for everyone but it is behaving poorly for me, so I created my own static blog generator. My motivation stems from the fact that, after a year of working with JavaScript front-end frameworks and dabbling in Node, Jekyll&#x27;s liquid templates, Ruby rake tasks, and what-not are looking just a little foreign and over-engineered. I&#x27;m also increasingly a fan of building my own tools and doing things in &quot;my own style&quot; when it comes to programming.&lt;/p&gt;
+</summary>
+
+    </entry>
+    <entry>
+      <title type="html">The State of Angular 1 in 2016</title>
+      <link href="/the-state-of-angular-1-in-2016" rel="alternate" type="text/html" title="The State of Angular 1 in 2016" />
+      <published>2016-08-31 6:54:00 -0400</published>
+        <updated>2016-08-31 6:54:00 -0400</updated>
+
+      <id></id>
+      <content type="html" xml:base=""></content>
+
+        <author>
+            <name>Ian Delairre</name>
+            <email></email>
+        </author>
+
+
+
+        <summary type="html">&lt;p&gt;I saw some haughtily titled articles (&lt;a href&#x3D;&quot;https://medium.com/javascript-and-opinions/state-of-the-art-javascript-in-2016-ab67fc68eb0b#.i9nbs2snf&quot;&gt;The State of Javascript in 2016&lt;/a&gt; by Francois Ward and &lt;a href&#x3D;&quot;https://medium.com/@sachagreif/the-state-of-javascript-front-end-frameworks-1a2d8a61510#.wixfq9jkh&quot;&gt;The State of Javascript: Front-End Frameworks&lt;/a&gt; by Sacha Greif) and they struck me. I cannot talk with the same breadth and authority on Angular or JavaScript but I do know--from having to hack together a project in Angular 1 in less than 2 days just now--a little bit about the &quot;health&quot; of Angular.&lt;/p&gt;
+&lt;p&gt;Its actually looking good.&lt;/p&gt;
+</summary>
+
+    </entry>
+    <entry>
+      <title type="html">who am i? what am i doing here? why am i talking?</title>
+      <link href="/who-am-i-what-am-i-doing-here-why-am-i-talking" rel="alternate" type="text/html" title="who am i? what am i doing here? why am i talking?" />
+      <published>2015-04-01 10:52:38 -0400</published>
+        <updated>2015-04-01 10:52:38 -0400</updated>
+
+      <id></id>
+      <content type="html" xml:base=""></content>
+
+        <author>
+            <name>Ian Delairre</name>
+            <email></email>
+        </author>
+
+
+
+        <summary type="html">&lt;p&gt;This blog constitutes my first foray into computer science. The topics here cover fundamentals like data structures, basic functions like sorts and the fundamental concepts of object oriented programming. I am by no means an expert and this constitutes a kind of excursion into totally foreign lands for me. If you want to know how a person with zero to no mathematical training understands computer science than you&#x27;ve come to the right place (you will no doubt hear some griping about the US education system and its consistent failure to teach math in a fair/interesting/useful manner).&lt;/p&gt;
+</summary>
+
+    </entry>
+    <entry>
+      <title type="html">CS: trees, binary trees and tries</title>
+      <link href="/cs-trees-binary-trees-and-tries" rel="alternate" type="text/html" title="CS: trees, binary trees and tries" />
+      <published>2015-04-01 10:52:38 -0400</published>
+        <updated>2015-04-01 10:52:38 -0400</updated>
+
+      <id></id>
+      <content type="html" xml:base=""></content>
+
+        <author>
+            <name>Ian Delairre</name>
+            <email></email>
+        </author>
+
+
+
+        <summary type="html">&lt;p&gt;&lt;i&gt;Note: Most of this information was gained from a basic Google search and is presented here for the sake of distilling some basic concepts of computer science into an easily understandable form. This post concerns Tree data structures.&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;tree/shameless Laruelle plug:&lt;/strong&gt;[^1]
+&lt;img src&#x3D;&quot;http://rosettacode.org/mw/images/d/d7/Fractal_tree.svg&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;Trees&lt;/h2&gt;
+&lt;p&gt;A tree is a data structure that consists of a parent or root node which stores a data element and which possesses at least one child or branch. These child nodes in turn possess their own values and may have their own children (note: all nodes have 1 parent except for the root node which has 0).&lt;/p&gt;
+
+&lt;p&gt;Trees are particularly useful for storing heirarchically arranged data. They are also very human readable since their visual organization resembles that of an actual tree. Further, for a relatively complex data structure (relative to a stack or queue) they can be traversed or &quot;&lt;a href&#x3D;&quot;http://en.wikipedia.org/wiki/Tree_traversal&quot;&gt;walked&lt;/a&gt;&quot; through relatively quickly, although this is highly dependent on their depth. Further, in the case of natural language processing, a large corpus of text can be stored as a tree which significantly reduces the query time required to find a sequence of words (as is the case with &lt;a href&#x3D;&quot;http://en.wikipedia.org/wiki/N-gram&quot;&gt;&lt;i&gt;n&lt;/i&gt;-grams)&lt;/a&gt; and the memory requirements for its storage.&lt;/p&gt;
+
+</summary>
+
+    </entry>
+    <entry>
+      <title type="html">CS: bubble, merge, insertion, quick, and selection sorts</title>
+      <link href="/cs-bubble-merge-insertion-quick-and-selection-sorts" rel="alternate" type="text/html" title="CS: bubble, merge, insertion, quick, and selection sorts" />
+      <published>2015-04-01 10:52:38 -0400</published>
+        <updated>2015-04-01 10:52:38 -0400</updated>
+
+      <id></id>
+      <content type="html" xml:base=""></content>
+
+        <author>
+            <name>Ian Delairre</name>
+            <email></email>
+        </author>
+
+
+
+        <summary type="html">&lt;p&gt;&lt;i&gt;Note: Most of this information was gained from a basic Google search and is presented here for the sake of distilling some basic concepts of computer science into an easily understandable form. This post concerns the variety of sort types.&lt;/i&gt;&lt;/p&gt;
+&lt;h2&gt;Bubble sort&lt;/h2&gt;
+
+&lt;p&gt;The first sorting method we will deal with is the bubble sort. For something like this I immediately want to know why it is called a bubble sort. Fortunately the good folks at wikibooks have an answer: &quot;The bubble sort gets its name because elements tend to move up into the correct order like bubbles rising to the surface.&quot;[^1] Interesting, so why does it have this behavior? The scary-smart brogrammer (who like myself could use some decent acne wash) who does the Harvard CS50 course explains: &quot;the right most elements are garaunteed to be in their correct place.&quot; He then takes the worst case scenario for sorting an array of numbers (the case that involves the most iterations) to demonstrate.&lt;/p&gt;
+</summary>
+
+    </entry>
+    <entry>
+      <title type="html">CS: abstract data types</title>
+      <link href="/cs-abstract-data-types" rel="alternate" type="text/html" title="CS: abstract data types" />
+      <published>2015-04-01 10:52:38 -0400</published>
+        <updated>2015-04-01 10:52:38 -0400</updated>
+
+      <id></id>
+      <content type="html" xml:base=""></content>
+
+        <author>
+            <name>Ian Delairre</name>
+            <email></email>
+        </author>
+
+
+
+        <summary type="html">&lt;p&gt;&lt;i&gt;Note: Most of this information was gained from a basic Google search and is presented here for the sake of distilling some basic concepts of computer science into an easily understandable form. This post concerns Abstract Data Types or ADTs.&lt;/i&gt;&lt;/p&gt;
+&lt;h2&gt;Queues&lt;/h2&gt;
+
+&lt;p&gt;A queue is a simple data type which functions basically as a line (e.g., a line of cars at a tollbooth or line for a bank teller) where linearly or sequentially ordered elements are added on one end and retrieved at the other (another term for this type of data structure is “sequential collection”).[^1] Operations on the queue are limited to two types: adding elements to the end (called enqueuing) and the removal of elements from the front (dequeuing).[^2] As such, a queue is an example of a “First-In-First-Out (FIFO)” data structure where “the first element added to the queue will be the first element removed.” Queues are useful when only limited computing resources are available or can only handle a limited number of requests. In situations where system resources are scarce, the order of the data must be maintained and timeliness isn’t an issue, queues can be an appropriate way to process something like server requests.[^3]&lt;/p&gt;
+</summary>
+
+    </entry>
+</feed>
